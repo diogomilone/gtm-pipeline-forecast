@@ -1,0 +1,119 @@
+/* Page kit, release 2.3.0: the takeaway figure (tally added in 2.3.0). Load after kit/kit.css; kit/takeaway.js arms and plays it.
+   One animated figure per page, placed under the hero, that plays once and ends on the number the headline states.
+   - Only marks move (bars, lines, points). Labels, values, captions and sources are visible from the first paint, so
+     find-in-page, screen readers, screenshots and a figure that never plays show every number. The one exception is a
+     brief swell of the key bar's value, which never hides it.
+   - Everything plays once and ends within about 4 s (no repeating rings or pulses). Animations fill backwards only:
+     each holds its first frame through its delay and then hands back to the finished figure, which is its last frame.
+   - Every rule outside html.tk-js and .tk-play is the finished figure. kit/takeaway.js adds html.tk-js in the head, before
+     first paint, only when motion is allowed and IntersectionObserver exists, and drops it after 3 s if the page never
+     reached DOMContentLoaded; reduced motion, no JavaScript, print and screenshots show the final state.
+   Markup: figure.chart.takeaway with tk-bars (horizontal bars), tk-columns (vertical bars) or tk-before-after.
+     Bars and columns: each bar .tk-mark, the bar the headline states .tk-mark.tk-key, its value .tk-key-value. The order
+     comes from --tk-i (0 to 5) in an inline style; rows (li or .tk-row) that set none take their place among siblings.
+     Marks may be HTML boxes or SVG shapes; SVG marks scale in their own box (transform-box: fill-box).
+     Before and after: .tk-before (the first point), .tk-line (the line that grows), an optional .tk-mid, .tk-after and
+     .tk-ring on the rows that ring once; the row index --tk-r is set per mark or inherited from a g.tk-row.
+     Tally (tk-tally, 2.3.0): one HTML mark per item in a list (ol or ul). Each .tk-mark fills in turn: --tk-i set inline on
+     the mark, or its li's place among siblings. The item the headline singles out carries .tk-key on its mark, which keeps
+     its own resting style (hollow) and gets its outline after the others, then pulses once. Set --tk-n on the figure to the
+     number of marks that fill (default 6); the key mark's outline starts at .45 s + n * .28 s, so keep n at 7 or fewer to end
+     within 4 s. A static count line (for example "6 of 7 caught") sits above the list.
+   Marks carry no transform of their own; put any positioning transform on a parent g. */
+
+figure.chart.takeaway {box-shadow: inset 0 3px 0 var(--viz-highlight, var(--viz-accent));}
+.takeaway .takeaway-source {margin: 0; font-size: var(--viz-type-small); color: var(--viz-muted);}
+/* An HTML key value must be transformable for its swell; inside a grid or flex row it is blockified either way. */
+.takeaway span.tk-key-value {display: inline-block;}
+/* Rings exist only while they pulse: invisible at rest, before and after. */
+.takeaway .tk-ring {fill: none; stroke: var(--viz-highlight, var(--viz-accent)); stroke-width: 1.5; opacity: 0;}
+/* Tally marks, finished state: a filled disc per item, the key item hollow with a highlight outline. */
+.takeaway.tk-tally .tk-mark {display: block; box-sizing: border-box; width: 1.5rem; height: 1.5rem; border-radius: 50%; border: 2px solid var(--viz-foreground); background: var(--viz-foreground);}
+.takeaway.tk-tally .tk-mark.tk-key {background: transparent; border: 3px solid var(--viz-highlight);}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  @keyframes tk-grow {from {transform: scaleX(0);}}
+  @keyframes tk-grow-y {from {transform: scaleY(0);}}
+  @keyframes tk-pop {from {opacity: 0; transform: scale(.2);}}
+  @keyframes tk-light {from {background: var(--viz-bar);}}
+  @keyframes tk-light-fill {from {fill: var(--viz-bar);}}
+  @keyframes tk-emph {0% {transform: scale(1);} 40% {transform: scale(1.18);} 100% {transform: scale(1);}}
+  @keyframes tk-pulse {
+    0% {box-shadow: 0 0 0 0 color-mix(in srgb, var(--viz-highlight) 55%, transparent);}
+    100% {box-shadow: 0 0 0 10px color-mix(in srgb, var(--viz-highlight) 0%, transparent);}
+  }
+  @keyframes tk-ring {0% {opacity: .8; r: 6px;} 100% {opacity: 0; r: 20px;}}
+  @keyframes tk-fill {from {background-color: transparent; border-color: var(--viz-border);}}
+  @keyframes tk-outline {from {border-color: var(--viz-border);}}
+
+  /* Bars and columns: rows grow in order; the key bar grows grey, then lights up last and its value swells once.
+     Ends at about 3.2 s. */
+  .takeaway:is(.tk-bars, .tk-columns) :is(li, .tk-row):nth-child(1) {--tk-i: 0;}
+  .takeaway:is(.tk-bars, .tk-columns) :is(li, .tk-row):nth-child(2) {--tk-i: 1;}
+  .takeaway:is(.tk-bars, .tk-columns) :is(li, .tk-row):nth-child(3) {--tk-i: 2;}
+  .takeaway:is(.tk-bars, .tk-columns) :is(li, .tk-row):nth-child(4) {--tk-i: 3;}
+  .takeaway:is(.tk-bars, .tk-columns) :is(li, .tk-row):nth-child(5) {--tk-i: 4;}
+  .takeaway:is(.tk-bars, .tk-columns) :is(li, .tk-row):nth-child(n+6) {--tk-i: 5;}
+  .takeaway.tk-bars :is(.tk-mark, .tk-key) {transform-origin: left center;}
+  .takeaway.tk-columns :is(.tk-mark, .tk-key) {transform-origin: center bottom;}
+  .takeaway:is(.tk-bars, .tk-columns) svg :is(.tk-mark, .tk-key) {transform-box: fill-box;}
+  .takeaway .tk-key-value {transform-origin: right center;}
+  .takeaway svg .tk-key-value {transform-box: fill-box; transform-origin: center;}
+  .tk-js .takeaway.tk-bars:not(.tk-play) :is(.tk-mark, .tk-key) {transform: scaleX(0);}
+  .tk-js .takeaway.tk-columns:not(.tk-play) :is(.tk-mark, .tk-key) {transform: scaleY(0);}
+  .tk-js .takeaway.tk-bars.tk-play :is(.tk-mark, .tk-key) {animation: tk-grow .65s cubic-bezier(.2, .7, .2, 1) calc(.1s + var(--tk-i, 0) * .16s) backwards;}
+  .tk-js .takeaway.tk-columns.tk-play :is(.tk-mark, .tk-key) {animation: tk-grow-y .65s cubic-bezier(.2, .7, .2, 1) calc(.1s + var(--tk-i, 0) * .16s) backwards;}
+  .tk-js .takeaway.tk-bars.tk-play .tk-key {
+    animation: tk-grow .65s cubic-bezier(.2, .7, .2, 1) calc(.1s + var(--tk-i, 0) * .16s) backwards,
+               tk-light .5s ease-out 1.6s backwards, tk-pulse 1.1s ease-out 2.1s;
+  }
+  .tk-js .takeaway.tk-columns.tk-play .tk-key {
+    animation: tk-grow-y .65s cubic-bezier(.2, .7, .2, 1) calc(.1s + var(--tk-i, 0) * .16s) backwards,
+               tk-light .5s ease-out 1.6s backwards, tk-pulse 1.1s ease-out 2.1s;
+  }
+  /* An SVG key lights up through its fill (an SVG shape draws no background or box shadow). */
+  .tk-js .takeaway.tk-bars.tk-play svg .tk-key {
+    animation: tk-grow .65s cubic-bezier(.2, .7, .2, 1) calc(.1s + var(--tk-i, 0) * .16s) backwards, tk-light-fill .5s ease-out 1.6s backwards;
+  }
+  .tk-js .takeaway.tk-columns.tk-play svg .tk-key {
+    animation: tk-grow-y .65s cubic-bezier(.2, .7, .2, 1) calc(.1s + var(--tk-i, 0) * .16s) backwards, tk-light-fill .5s ease-out 1.6s backwards;
+  }
+  .tk-js .takeaway:is(.tk-bars, .tk-columns).tk-play .tk-key-value {animation: tk-emph .6s ease-out 1.6s;}
+
+  /* Before and after: per row the first point appears, the line runs right, the optional middle point and the after
+     point land; the rows marked with a ring ring once. Ends at about 3.7 s with four rows. */
+  .takeaway.tk-before-after svg .tk-line {transform-box: fill-box;}
+  .takeaway.tk-before-after .tk-line {transform-origin: left center;}
+  .takeaway.tk-before-after svg :is(.tk-before, .tk-mid, .tk-after) {transform-box: fill-box;}
+  .takeaway.tk-before-after :is(.tk-before, .tk-mid, .tk-after) {transform-origin: center;}
+  .tk-js .takeaway.tk-before-after:not(.tk-play) :is(.tk-line, .tk-before, .tk-mid, .tk-after) {opacity: 0;}
+  .tk-js .takeaway.tk-before-after.tk-play .tk-before {animation: tk-pop .35s cubic-bezier(.3, 1.6, .5, 1) calc(.15s + var(--tk-r, 0) * .5s) backwards;}
+  .tk-js .takeaway.tk-before-after.tk-play .tk-line {animation: tk-grow .6s cubic-bezier(.4, 0, .2, 1) calc(.35s + var(--tk-r, 0) * .5s) backwards;}
+  .tk-js .takeaway.tk-before-after.tk-play .tk-mid {animation: tk-pop .3s cubic-bezier(.3, 1.6, .5, 1) calc(.6s + var(--tk-r, 0) * .5s) backwards;}
+  .tk-js .takeaway.tk-before-after.tk-play .tk-after {animation: tk-pop .4s cubic-bezier(.3, 1.6, .5, 1) calc(.9s + var(--tk-r, 0) * .5s) backwards;}
+  /* No fill mode: the resting opacity 0 holds before and after the pulse. */
+  .tk-js .takeaway.tk-before-after.tk-play .tk-ring {animation: tk-ring 1.4s ease-out 2.25s;}
+
+  /* Tally: the marks fill one by one; the key mark is outlined after them and pulses once. Ends at about 3.7 s with six
+     filling marks. */
+  .takeaway.tk-tally li:nth-child(1) {--tk-i: 0;}
+  .takeaway.tk-tally li:nth-child(2) {--tk-i: 1;}
+  .takeaway.tk-tally li:nth-child(3) {--tk-i: 2;}
+  .takeaway.tk-tally li:nth-child(4) {--tk-i: 3;}
+  .takeaway.tk-tally li:nth-child(5) {--tk-i: 4;}
+  .takeaway.tk-tally li:nth-child(6) {--tk-i: 5;}
+  .takeaway.tk-tally li:nth-child(7) {--tk-i: 6;}
+  .takeaway.tk-tally li:nth-child(n+8) {--tk-i: 7;}
+  .tk-js .takeaway.tk-tally:not(.tk-play) .tk-mark {background-color: transparent; border-color: var(--viz-border);}
+  .tk-js .takeaway.tk-tally.tk-play .tk-mark {animation: tk-fill .35s ease-out calc(.15s + var(--tk-i, 0) * .28s) backwards;}
+  .tk-js .takeaway.tk-tally.tk-play .tk-key {
+    animation: tk-outline .45s ease-out calc(.45s + var(--tk-n, 6) * .28s) backwards,
+               tk-pulse 1.1s ease-out calc(.95s + var(--tk-n, 6) * .28s);
+  }
+}
+
+/* Print shows the finished figure (the motion rules above are for screens only); rings stay hidden. */
+@media print {
+  .takeaway :is(.tk-mark, .tk-key, .tk-key-value, .tk-line, .tk-before, .tk-mid, .tk-after) {animation: none !important;}
+  .takeaway .tk-ring {animation: none !important; opacity: 0 !important;}
+}

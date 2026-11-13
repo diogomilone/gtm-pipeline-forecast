@@ -1,0 +1,59 @@
+{
+ "round": "r1",
+ "question": "How far off is a stage-weighted pipeline forecast of a quarter's wins when its stage probabilities are a CRM's defaults, learned from history, or depend on time in stage; and how long from signed to live?",
+ "data": {
+  "source": "CanadaBuys open data, Government of Canada",
+  "licence": "Open Government Licence - Canada, https://open.canada.ca/en/open-government-licence-canada",
+  "files": {
+   "tenders": "https://canadabuys.canada.ca/opendata/pub/tenderNoticeComplete-avisAppelOffresComplet.csv",
+   "awards": "https://canadabuys.canada.ca/opendata/pub/awardNoticeComplete-avisAttributionComplet.csv"
+  },
+  "cutoff": "the download date; the latest publication date in the tender file is recorded in results",
+  "dropped_fields": "contact names, emails, phones, fax and addresses are never loaded"
+ },
+ "opportunity": {
+  "key": "solicitation number, else reference number",
+  "excluded_notice_types": ["Request for Information"],
+  "created_at": "min publication date",
+  "bid_close_at": "max tender closing date",
+  "expected_start": "expected contract start date of the latest-published notice",
+  "cancelled_at": "for a notice with status Cancelled, its amendment date (else its closing date)",
+  "won_at": "min contract award date over award rows with amendment type Original or blank and award date >= created_at",
+  "won_known_at": "min publication date over those award rows",
+  "amount": "sum of contract amounts above 1 over those rows; missing when none",
+  "go_live_at": "min contract start date over those rows",
+  "channel_groups": {
+   "Open request for proposal": ["Request for Proposal"],
+   "Against a supply arrangement": ["RFP against Supply Arrangement"],
+   "Standing offer request": ["Request for Standing Offer"],
+   "Advance contract award notice": ["Advance Contract Award Notice"],
+   "Other": "every other notice type, including blank"
+  }
+ },
+ "stages_at_snapshot": {
+  "rule": "only facts published before S",
+  "out": ["created_at >= S", "won_known_at < S", "cancelled_at < S"],
+  "open_for_bids": "created_at < S <= bid_close_at",
+  "awaiting_award": "bid_close_at < S and not out",
+  "days_in_stage": "S - created_at (open for bids), S - bid_close_at (awaiting award)"
+ },
+ "target": "count of pipeline-at-S opportunities with won_at in [S, next quarter start), using all awards published up to the cutoff",
+ "snapshots_scored": ["2023-10-01", "2024-01-01", "2024-04-01", "2024-07-01", "2024-10-01", "2025-01-01", "2025-04-01", "2025-07-01"],
+ "main_snapshot": "2025-07-01",
+ "history_snapshots": "the 4 quarter starts before S",
+ "arms": {
+  "fixed": {"weights": {"open_for_bids": 0.60, "awaiting_award": 0.80}, "range": [{"open_for_bids": 0.40, "awaiting_award": 0.60}, {"open_for_bids": 0.80, "awaiting_award": 0.90}], "date_rule": "expected close date in [S, quarter end): expected_start when present, else bid_close_at", "source_of_weights": "HubSpot default deal pipeline: Presentation scheduled 60%, Decision maker bought-in 80% (40/60 and 80/90 are the neighbouring default stages)"},
+  "learned_stage": {"date_rule": "as fixed", "weight": "share won within the following quarter among history deals in the stage that met the date rule, awards published before S"},
+  "time_in_stage": {"date_rule": "none", "bands_days": [[0, 14], [15, 30], [31, 60], [61, 120], [121, 365], [366, null]], "weight": "share won within the following quarter among history deals in the same stage and band, awards published before S; a cell with fewer than 20 history deals falls back to the stage's pooled share"},
+  "run_rate": {"forecast": "previous quarter's pipeline-win count, awards published before S"}
+ },
+ "leakage_contrast": "learned_stage, time_in_stage and run_rate recomputed with awards published up to the cutoff",
+ "interval": "80%: forecast +/- 1.2816 * sqrt(sum p(1-p)), arms fixed, learned_stage, time_in_stage",
+ "scores": ["signed error", "absolute percentage error", "MAPE over snapshots", "mean signed percentage error", "80% interval coverage"],
+ "description_only": {
+  "go_live": "go_live_at - won_at for wins with won_at in [2022-08-08, 2025-09-30]: median, quartiles, share < 0, share >= 30; go_live_at - expected_start where present",
+  "segments": "by channel and by the 8 largest departments (names normalised for spelling variants): opportunities created 2022-08-08 to 2025-06-30, win rate, median days created to won, share cancelled",
+  "amounts": "share of wins with a usable amount; median amount"
+ },
+ "stopping_rule": "every arm on every snapshot, all published; nothing tuned after results"
+}

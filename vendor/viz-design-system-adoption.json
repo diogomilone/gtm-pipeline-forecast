@@ -1,0 +1,139 @@
+{
+ "dependency": "viz-design-system",
+ "version": "2.3.0",
+ "status_at_adoption": "candidate",
+ "release_id": "v2.3.0-fcc57ac48354226da4164569e47090b02fc128076a3207212a533a3cac99cd16",
+ "manifest_path": "portfolio/viz-design-system/releases/2.3.0/release-manifest.json",
+ "manifest_sha256": "66b97e041127438272ccc29d97fa13c3cc5f1b48558af35d8ec0b20a98cc3631",
+ "payload_sha256": "fcc57ac48354226da4164569e47090b02fc128076a3207212a533a3cac99cd16",
+ "copied_from": "releases/2.3.0 only; bytes unedited",
+ "previous_pin": null,
+ "files": [
+  {
+   "path": "vendor/viz-design-system/tokens.css",
+   "release_path": "tokens.css",
+   "bytes": 6300,
+   "sha256": "890c079f7c1d2b96ca5f9446cfa4eefb47791e865546a80124850f7589a0132b"
+  },
+  {
+   "path": "vendor/viz-design-system/tokens.json",
+   "release_path": "tokens.json",
+   "bytes": 4492,
+   "sha256": "efdf4cac151ba7788158afd2934552f4d602ec77788681fcbf1f235226cc3e75"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/kit.css",
+   "release_path": "kit/kit.css",
+   "bytes": 16959,
+   "sha256": "df88c5ca8435bea6d5b35b7bbbdab4e1ae785c585d67924a8486a477ff18937f"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/kit.js",
+   "release_path": "kit/kit.js",
+   "bytes": 2643,
+   "sha256": "47ea71f6b331457a9ab2edaab1b5ce326e18b8fa608e1f3e0518988eb10642fe"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/numfmt.py",
+   "release_path": "kit/numfmt.py",
+   "bytes": 6311,
+   "sha256": "3235d3efdd0c070acabcb064efeb47f61d22c2af771d779bd6482986582faed1"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/takeaway.css",
+   "release_path": "kit/takeaway.css",
+   "bytes": 9685,
+   "sha256": "2174051b402ffb5f4666348c5f527abdc5522fbf73f884c0169799f243c1f6aa"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/takeaway.js",
+   "release_path": "kit/takeaway.js",
+   "bytes": 2063,
+   "sha256": "fa71645b9caf14b5cc8be1dfc383fbcb2497ff092551eec6dc38e28e7c02d786"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/wayfinding.css",
+   "release_path": "kit/wayfinding.css",
+   "bytes": 3573,
+   "sha256": "d522d6d9816ab11c91937513d881520763702383fdf6b6c938721e3c1974591f"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/wayfinding.js",
+   "release_path": "kit/wayfinding.js",
+   "bytes": 9881,
+   "sha256": "e8e612f82b81e2a1a312c9726561f98863af7ac3614bfab8d04aa4e2593bfa4e"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/public-sans-latin-400-normal.woff2",
+   "release_path": "assets/fonts/public-sans-latin-400-normal.woff2",
+   "bytes": 14632,
+   "sha256": "36274b5787b4f03b27e65ae971d6c808a96838ccd60c9dabaee154889b6bba82"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/public-sans-latin-600-normal.woff2",
+   "release_path": "assets/fonts/public-sans-latin-600-normal.woff2",
+   "bytes": 14592,
+   "sha256": "c7842f97346df1b3b470e9d71acde90f132dd858508ec5ae6606401e5d0938f7"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/ibm-plex-mono-latin-400-normal.woff2",
+   "release_path": "assets/fonts/ibm-plex-mono-latin-400-normal.woff2",
+   "bytes": 14708,
+   "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/ibm-plex-mono-latin-500-normal.woff2",
+   "release_path": "assets/fonts/ibm-plex-mono-latin-500-normal.woff2",
+   "bytes": 14888,
+   "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/newsreader-latin-500-normal.woff2",
+   "release_path": "assets/fonts/newsreader-latin-500-normal.woff2",
+   "bytes": 23624,
+   "sha256": "5613e2fc8377392c02e8ac9d55014689fb5320a5f2a7be55e8088a314728ac2c"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/newsreader-latin-600-normal.woff2",
+   "release_path": "assets/fonts/newsreader-latin-600-normal.woff2",
+   "bytes": 23876,
+   "sha256": "05c91a26d19a61eafe7ce8e0b77eff3fd279ce994dc89f432f4cd06784935e84"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/newsreader.LICENSE.txt",
+   "release_path": "assets/fonts/newsreader.LICENSE.txt",
+   "bytes": 4520,
+   "sha256": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/public-sans.LICENSE.txt",
+   "release_path": "assets/fonts/public-sans.LICENSE.txt",
+   "bytes": 4503,
+   "sha256": "705a497c781f6463ff819abb513bb495f3fb05256f1d20321e3275813c0bafa5"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/ibm-plex-mono.LICENSE.txt",
+   "release_path": "assets/fonts/ibm-plex-mono.LICENSE.txt",
+   "bytes": 5299,
+   "sha256": "23b0a9d0c6d3f140a0b77e483c5cfa6bba574325ef5cb189ed9f2fec4884533f"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/manifest.json",
+   "release_path": "assets/fonts/manifest.json",
+   "bytes": 3704,
+   "sha256": "8ea8fde164430c15c2aa2d7cbf0d44e6a70eb93850fa8c786772c56cadfcc236"
+  },
+  {
+   "path": "vendor/viz-design-system/LICENSE",
+   "release_path": "LICENSE",
+   "bytes": 1084,
+   "sha256": "d75d60dfcc5aeaf4eccdf3a42cea663942be0a2296e2f473134540d110c593f9"
+  },
+  {
+   "path": "vendor/viz-design-system/THIRD_PARTY_NOTICES.md",
+   "release_path": "THIRD_PARTY_NOTICES.md",
+   "bytes": 4706,
+   "sha256": "e8ab272c7785fd02e0398e4fc7db4b9dd436f6e3d6595a4b07ad56f423755bbd"
+  }
+ ]
+}

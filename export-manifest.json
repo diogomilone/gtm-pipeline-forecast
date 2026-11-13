@@ -1,0 +1,261 @@
+{
+ "version": 1,
+ "project": "gtm-pipeline-forecast",
+ "files": [
+  {
+   "path": "CHANGES-r1.md",
+   "bytes": 1951,
+   "sha256": "6de09e3f1b173057fc51dc4aee9fd71e8cd1dbd32db0a910abd4d9f34dbc5ba4"
+  },
+  {
+   "path": "DESIGN-r1.md",
+   "bytes": 6665,
+   "sha256": "829fea347c80c42657d214e951cb8e7cd6b2833273bb4a475b302e74a9adbe0d"
+  },
+  {
+   "path": "README.md",
+   "bytes": 4620,
+   "sha256": "570e8a0355c2639f17190f13bd7e7d84f90778bca1b93fae230d57e3997938e2"
+  },
+  {
+   "path": "assumptions.json",
+   "bytes": 693,
+   "sha256": "3788778536d54c3a13067e1fe0d04e6fb405882f232da736f76a7c81ee21dcdc"
+  },
+  {
+   "path": "backtest.html",
+   "bytes": 25614,
+   "sha256": "bd61f7b2bbb7305f18c4c63172f26fd82dd530a3efdbbb906437ef40bce3cacb"
+  },
+  {
+   "path": "data/notices.csv.gz",
+   "bytes": 381865,
+   "sha256": "6c50ad5914a274323daeca6723218b57193fc98d257ac96219a62eb10686c7e2"
+  },
+  {
+   "path": "data/opportunities.csv.gz",
+   "bytes": 503824,
+   "sha256": "3e139af663da609f7ffa2f9db3656342544af7d9edfdb6a7f6dd2c9db0dd7a60"
+  },
+  {
+   "path": "data/sources.json",
+   "bytes": 883,
+   "sha256": "df21b341db1b3044d70b734604b540600eae895c9d08e6a0d76ed3474464e9f3"
+  },
+  {
+   "path": "index.html",
+   "bytes": 17804,
+   "sha256": "f25e50215cad51374f79ed3f968d28ff9cefd99fd3b1b0fa2cc2e68005922129"
+  },
+  {
+   "path": "method.html",
+   "bytes": 20973,
+   "sha256": "fad574a4c64b1bb5c3085ecd0c0a3623035975df9ebe52dc8fa4df23f161898b"
+  },
+  {
+   "path": "predictions-r1.json",
+   "bytes": 1838,
+   "sha256": "dc318a184309a3d4b16e970ff72ebe3ac628610315ddd69418a4fe5d9f001bb5"
+  },
+  {
+   "path": "protocol-r1.json",
+   "bytes": 4591,
+   "sha256": "a5ba6ef9f34f3ef20e6a4d45402ec4219ab530f314a9dc428dfb05c249339965"
+  },
+  {
+   "path": "results.html",
+   "bytes": 24878,
+   "sha256": "2382e3e58c271eb69cf6ebec6bdf36ce0c0f3e43b85d18c318f8a68a8c91ed2f"
+  },
+  {
+   "path": "results/after.json",
+   "bytes": 11570,
+   "sha256": "c4d7df88e66c3598abf00fb12087cdcba244c1ea530d0cc365919f892fa4d2bc"
+  },
+  {
+   "path": "results/stale-deals.json",
+   "bytes": 10649,
+   "sha256": "79e540e84437a040f071631590dcb893397883926d212fbf462e3650ea2baf31"
+  },
+  {
+   "path": "results/summary-r2.json",
+   "bytes": 68776,
+   "sha256": "b13d462e0d26802f72c75f57986dc0f80feb5cd78b3c24e4d5578696216b88e4"
+  },
+  {
+   "path": "results/summary.json",
+   "bytes": 39987,
+   "sha256": "597c7f95fa317cce27b977c918917ccd68b75906639e77f30853320eb221aa38"
+  },
+  {
+   "path": "site/page.css",
+   "bytes": 4063,
+   "sha256": "bed9b74ebec6b01a8c357ce4f17f79c3cd87b76385c43819e0403fcb87266e2b"
+  },
+  {
+   "path": "site/render.py",
+   "bytes": 70246,
+   "sha256": "13c4ffd582b336db24342a5f12905b0e2b6862e3f01ed0ec1537f67110931360"
+  },
+  {
+   "path": "tests/test_pipeline.py",
+   "bytes": 8794,
+   "sha256": "3861a1ffbdc070817f9d3371ab8051817592d8f17e8493f397bceac69aef972c"
+  },
+  {
+   "path": "tools/after_results.py",
+   "bytes": 6408,
+   "sha256": "f579d8425284682586c57be85b00e96dc6016f3c8b8833b36ec19b10c55064f4"
+  },
+  {
+   "path": "tools/dash_free.py",
+   "bytes": 2432,
+   "sha256": "160f75e6cbcf1a413a7d5f4457229c62e5d6f51c3cae0631d76daba6dbce5014"
+  },
+  {
+   "path": "tools/get_data.py",
+   "bytes": 5508,
+   "sha256": "67a1959985b5058a6c7d12bfaab518ece4d1aafa292f4d6b28231b0cecee52b5"
+  },
+  {
+   "path": "tools/get_notices.py",
+   "bytes": 3795,
+   "sha256": "79b95a15a4ac02d6d143b98f69a856518ac65be5932e20bb1ec0721f78e9bdb3"
+  },
+  {
+   "path": "tools/pipeline.py",
+   "bytes": 10276,
+   "sha256": "921da190c7c7e1ff53f59e30687e0e31047c665fcc874b29329a317c8959cd0a"
+  },
+  {
+   "path": "tools/run_study.py",
+   "bytes": 9065,
+   "sha256": "4ee160f834ca0d1b337f66c51b7c78609b9ce9661b38df8082ec2a038d641f32"
+  },
+  {
+   "path": "tools/run_study_r2.py",
+   "bytes": 11889,
+   "sha256": "342b5091e4c9a4ae635b4a04e82874dd95f2af493acc9e3c287f26b93886388e"
+  },
+  {
+   "path": "tools/stale_deals.py",
+   "bytes": 2363,
+   "sha256": "3b21b2236805e927575df2dec726343bbdbafcfe31944fbc0d76397a89526d25"
+  },
+  {
+   "path": "tools/vendor_kit.py",
+   "bytes": 2659,
+   "sha256": "e66a072ceff27ef9ac6e14cb9ed2e691254aec8baedc57b931e80f4173c13bb8"
+  },
+  {
+   "path": "vendor/viz-design-system-adoption.json",
+   "bytes": 5255,
+   "sha256": "1a144f20cb23802cc8b5b02166aed19098e6f4f80ac9de012d9afc05c30df66b"
+  },
+  {
+   "path": "vendor/viz-design-system/LICENSE",
+   "bytes": 1084,
+   "sha256": "d75d60dfcc5aeaf4eccdf3a42cea663942be0a2296e2f473134540d110c593f9"
+  },
+  {
+   "path": "vendor/viz-design-system/THIRD_PARTY_NOTICES.md",
+   "bytes": 4706,
+   "sha256": "e8ab272c7785fd02e0398e4fc7db4b9dd436f6e3d6595a4b07ad56f423755bbd"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/ibm-plex-mono-latin-400-normal.woff2",
+   "bytes": 14708,
+   "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/ibm-plex-mono-latin-500-normal.woff2",
+   "bytes": 14888,
+   "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/ibm-plex-mono.LICENSE.txt",
+   "bytes": 5299,
+   "sha256": "23b0a9d0c6d3f140a0b77e483c5cfa6bba574325ef5cb189ed9f2fec4884533f"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/manifest.json",
+   "bytes": 3704,
+   "sha256": "8ea8fde164430c15c2aa2d7cbf0d44e6a70eb93850fa8c786772c56cadfcc236"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/newsreader-latin-500-normal.woff2",
+   "bytes": 23624,
+   "sha256": "5613e2fc8377392c02e8ac9d55014689fb5320a5f2a7be55e8088a314728ac2c"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/newsreader-latin-600-normal.woff2",
+   "bytes": 23876,
+   "sha256": "05c91a26d19a61eafe7ce8e0b77eff3fd279ce994dc89f432f4cd06784935e84"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/newsreader.LICENSE.txt",
+   "bytes": 4520,
+   "sha256": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/public-sans-latin-400-normal.woff2",
+   "bytes": 14632,
+   "sha256": "36274b5787b4f03b27e65ae971d6c808a96838ccd60c9dabaee154889b6bba82"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/public-sans-latin-600-normal.woff2",
+   "bytes": 14592,
+   "sha256": "c7842f97346df1b3b470e9d71acde90f132dd858508ec5ae6606401e5d0938f7"
+  },
+  {
+   "path": "vendor/viz-design-system/assets/fonts/public-sans.LICENSE.txt",
+   "bytes": 4503,
+   "sha256": "705a497c781f6463ff819abb513bb495f3fb05256f1d20321e3275813c0bafa5"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/kit.css",
+   "bytes": 16959,
+   "sha256": "df88c5ca8435bea6d5b35b7bbbdab4e1ae785c585d67924a8486a477ff18937f"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/kit.js",
+   "bytes": 2643,
+   "sha256": "47ea71f6b331457a9ab2edaab1b5ce326e18b8fa608e1f3e0518988eb10642fe"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/numfmt.py",
+   "bytes": 6311,
+   "sha256": "3235d3efdd0c070acabcb064efeb47f61d22c2af771d779bd6482986582faed1"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/takeaway.css",
+   "bytes": 9685,
+   "sha256": "2174051b402ffb5f4666348c5f527abdc5522fbf73f884c0169799f243c1f6aa"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/takeaway.js",
+   "bytes": 2063,
+   "sha256": "fa71645b9caf14b5cc8be1dfc383fbcb2497ff092551eec6dc38e28e7c02d786"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/wayfinding.css",
+   "bytes": 3573,
+   "sha256": "d522d6d9816ab11c91937513d881520763702383fdf6b6c938721e3c1974591f"
+  },
+  {
+   "path": "vendor/viz-design-system/kit/wayfinding.js",
+   "bytes": 9881,
+   "sha256": "e8e612f82b81e2a1a312c9726561f98863af7ac3614bfab8d04aa4e2593bfa4e"
+  },
+  {
+   "path": "vendor/viz-design-system/tokens.css",
+   "bytes": 6300,
+   "sha256": "890c079f7c1d2b96ca5f9446cfa4eefb47791e865546a80124850f7589a0132b"
+  },
+  {
+   "path": "vendor/viz-design-system/tokens.json",
+   "bytes": 4492,
+   "sha256": "efdf4cac151ba7788158afd2934552f4d602ec77788681fcbf1f235226cc3e75"
+  }
+ ]
+}

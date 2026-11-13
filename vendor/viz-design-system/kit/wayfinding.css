@@ -1,0 +1,37 @@
+/* Page kit, release 2.2.1: wayfinding. Load after kit/kit.css; kit/wayfinding.js (defer) drives it.
+   - Section bar: div.kit-section-bar holding nav.page-nav (one link per section) and span.kit-progress. It stays in view
+     as a slim bar with the section in view marked (aria-current="true") and a reading-progress line. Place it as a
+     direct child of body or main, not inside a .kit-wrap, so it sticks for the whole page.
+   - Next study: nav.next-study[data-next-study] holds the hub's "All studies" link; over http or https the script adds
+     the next study as one link (title and headline) from ../studies.json and keeps the "All studies" link.
+   - Fold: more than 8 items matching [data-kit-fold] fold into one details.kit-disclosure.kit-fold.
+   Anchor jumps and keyboard focus scroll below the sticky bar (WCAG 2.4.11, focus not obscured). */
+
+html:has(.kit-section-bar) {scroll-padding-top: 4.5rem;}
+.kit-section-bar {position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--viz-background) 94%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--viz-rule);}
+.kit-section-bar > .page-nav {width: 100%; max-width: var(--kit-max); margin-inline: auto; padding-inline: var(--kit-gutter);}
+.kit-section-bar .page-nav {display: flex; flex-wrap: nowrap; gap: 0 1.25rem; margin-block: 0; padding-block: .7rem .75rem; overflow-x: auto; scrollbar-width: none; font-size: var(--viz-type-small);}
+.kit-section-bar .page-nav::-webkit-scrollbar {display: none;}
+.kit-section-bar .page-nav a {display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; color: var(--viz-muted); text-decoration-color: transparent;}
+.kit-section-bar .page-nav a:hover {color: var(--viz-foreground); text-decoration-color: currentColor;}
+.kit-section-bar .page-nav a[aria-current="true"] {color: var(--viz-foreground); font-weight: 600; text-decoration-color: var(--viz-highlight, var(--viz-accent)); text-decoration-thickness: 2px;}
+.kit-progress {display: block; position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; background: var(--viz-highlight, var(--viz-accent)); transform-origin: left center; transform: scaleX(var(--kit-p, 0));}
+
+/* Next study: a plain "All studies" link until the script adds the card. */
+nav.next-study {margin-top: 3rem;}
+nav.next-study > a {display: inline-flex; align-items: center; min-height: 44px;}
+.next-study-card {display: grid; gap: .5rem; padding: 1.4rem 1.5rem 1.5rem; background: var(--viz-panel); border: 1px solid var(--viz-rule); border-radius: 8px; max-width: 46rem;}
+.next-study-kicker {margin: 0; font-family: var(--viz-font-body); font-size: .75rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--viz-accent);}
+.next-study-link {display: grid; gap: .5rem; color: inherit; text-decoration: none;}
+.next-study-title {display: block; font-family: var(--viz-font-heading); font-optical-sizing: auto; font-size: 1.6rem; font-weight: 500; line-height: 1.15;}
+.next-study-link:hover .next-study-title {text-decoration: underline;}
+.next-study-headline {display: block; font-family: var(--viz-font-heading); font-optical-sizing: auto; font-size: 1.15rem; line-height: 1.35;}
+.next-study-links {display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; margin: .4rem 0 0;}
+.next-study-links a {display: inline-flex; align-items: center; min-height: 44px;}
+
+/* Fold: the kit disclosure row and marker (kit/kit.css) with a bolder summary. */
+details.kit-fold > summary {font-weight: 600;}
+
+@media print {
+  .kit-section-bar {display: none;}
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "path": "assets/fonts/ibm-plex-mono-latin-400-normal.woff2",
+    "package": "@fontsource/ibm-plex-mono",
+    "version": "5.2.7",
+    "bytes": 14708,
+    "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+    "licence": "OFL-1.1",
+    "modified": false,
+    "source_url": "https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5.2.7/files/ibm-plex-mono-latin-400-normal.woff2",
+    "subset": "latin"
+  },
+  {
+    "path": "assets/fonts/ibm-plex-mono-latin-500-normal.woff2",
+    "package": "@fontsource/ibm-plex-mono",
+    "version": "5.2.7",
+    "bytes": 14888,
+    "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+    "licence": "OFL-1.1",
+    "modified": false,
+    "source_url": "https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5.2.7/files/ibm-plex-mono-latin-500-normal.woff2",
+    "subset": "latin"
+  },
+  {
+    "path": "assets/fonts/ibm-plex-mono.LICENSE.txt",
+    "package": "@fontsource/ibm-plex-mono",
+    "version": "5.2.7",
+    "bytes": 5299,
+    "sha256": "23b0a9d0c6d3f140a0b77e483c5cfa6bba574325ef5cb189ed9f2fec4884533f",
+    "licence": "OFL-1.1",
+    "modified": false,
+    "source_url": "https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5.2.7/LICENSE"
+  },
+  {
+    "path": "assets/fonts/newsreader-latin-500-normal.woff2",
+    "package": "@fontsource/newsreader",
+    "version": "5.2.10",
+    "bytes": 23624,
+    "sha256": "5613e2fc8377392c02e8ac9d55014689fb5320a5f2a7be55e8088a314728ac2c",
+    "licence": "OFL-1.1",
+    "modified": false,
+    "source_url": "https://cdn.jsdelivr.net/npm/@fontsource/newsreader@5.2.10/files/newsreader-latin-500-normal.woff2",
+    "subset": "latin"
+  },
+  {
+    "path": "assets/fonts/newsreader-latin-600-normal.woff2",
+    "package": "@fontsource/newsreader",
+    "version": "5.2.10",
+    "bytes": 23876,
+    "sha256": "05c91a26d19a61eafe7ce8e0b77eff3fd279ce994dc89f432f4cd06784935e84",
+    "licence": "OFL-1.1",
+    "modified": false,
+    "source_url": "https://cdn.jsdelivr.net/npm/@fontsource/newsreader@5.2.10/files/newsreader-latin-600-normal.woff2",
+    "subset": "latin"
+  },
+  {
+    "path": "assets/fonts/newsreader.LICENSE.txt",
+    "package": "@fontsource/newsreader",
+    "version": "5.2.10",
+    "bytes": 4520,
+    "sha256": "26028ec4e13b650065fa525a09532176f8a668b76ff849ea01c564a7480f91e7",
+    "licence": "OFL-1.1",
+    "modified": false,
+    "source_url": "https://cdn.jsdelivr.net/npm/@fontsource/newsreader@5.2.10/LICENSE"
+  },
+  {
+    "path": "assets/fonts/public-sans-latin-400-normal.woff2",
+    "package": "@fontsource/public-sans",
+    "version": "5.2.7",
+    "bytes": 14632,
+    "sha256": "36274b5787b4f03b27e65ae971d6c808a96838ccd60c9dabaee154889b6bba82",
+    "licence": "OFL-1.1",
+    "modified": false,
+    "source_url": "https://cdn.jsdelivr.net/npm/@fontsource/public-sans@5.2.7/files/public-sans-latin-400-normal.woff2",
+    "subset": "latin"
+  },
+  {
+    "path": "assets/fonts/public-sans-latin-600-normal.woff2",
+    "package": "@fontsource/public-sans",
+    "version": "5.2.7",
+    "bytes": 14592,
+    "sha256": "c7842f97346df1b3b470e9d71acde90f132dd858508ec5ae6606401e5d0938f7",
+    "licence": "OFL-1.1",
+    "modified": false,
+    "source_url": "https://cdn.jsdelivr.net/npm/@fontsource/public-sans@5.2.7/files/public-sans-latin-600-normal.woff2",
+    "subset": "latin"
+  },
+  {
+    "path": "assets/fonts/public-sans.LICENSE.txt",
+    "package": "@fontsource/public-sans",
+    "version": "5.2.7",
+    "bytes": 4503,
+    "sha256": "705a497c781f6463ff819abb513bb495f3fb05256f1d20321e3275813c0bafa5",
+    "licence": "OFL-1.1",
+    "modified": false,
+    "source_url": "https://cdn.jsdelivr.net/npm/@fontsource/public-sans@5.2.7/LICENSE"
+  }
+]

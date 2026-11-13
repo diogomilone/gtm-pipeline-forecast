@@ -1,0 +1,3400 @@
+{
+ "declaration": "CHANGES-r2.md",
+ "page_version": "v1",
+ "mape_moved_vs_v1": {
+  "fixed": -0.51,
+  "learned_stage": 0.31,
+  "time_in_stage": -0.13,
+  "run_rate": -0.19,
+  "time_in_stage_corrected": -0.1,
+  "run_rate_corrected": -0.01
+ },
+ "r2": {
+  "summary": {
+   "fixed": {
+    "mape": 22.21,
+    "bias_pct": 22.21,
+    "worst_abs_pct": 51.95,
+    "best_abs_pct": 4.23,
+    "too_high_quarters": 8,
+    "best_in_quarters": 6,
+    "covered80": 0
+   },
+   "learned_stage": {
+    "mape": 61.53,
+    "bias_pct": -61.53,
+    "worst_abs_pct": 68.2,
+    "best_abs_pct": 49.49,
+    "too_high_quarters": 0,
+    "best_in_quarters": 0,
+    "covered80": 0
+   },
+   "time_in_stage": {
+    "mape": 27.65,
+    "bias_pct": -27.65,
+    "worst_abs_pct": 42.5,
+    "best_abs_pct": 7.26,
+    "too_high_quarters": 0,
+    "best_in_quarters": 1,
+    "covered80": 0
+   },
+   "run_rate": {
+    "mape": 32.81,
+    "bias_pct": -32.81,
+    "worst_abs_pct": 52.01,
+    "best_abs_pct": 9.6,
+    "too_high_quarters": 0,
+    "best_in_quarters": 1
+   },
+   "corrected": {
+    "time_in_stage": {
+     "mape": 16.21,
+     "bias_pct": -12.26,
+     "worst_abs_pct": 34.27,
+     "best_abs_pct": 5.47,
+     "too_high_quarters": 1
+    },
+    "run_rate": {
+     "mape": 17.95,
+     "bias_pct": 1.49,
+     "worst_abs_pct": 42.25,
+     "best_abs_pct": 2.68,
+     "too_high_quarters": 3
+    }
+   },
+   "same_target": {
+    "fixed": {
+     "mape": 142.76,
+     "bias_pct": 142.76,
+     "worst_abs_pct": 180.46,
+     "best_abs_pct": 108.02,
+     "too_high_quarters": 8
+    },
+    "learned_stage": {
+     "mape": 23.46,
+     "bias_pct": -23.46,
+     "worst_abs_pct": 40.22,
+     "best_abs_pct": 6.77,
+     "too_high_quarters": 0
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "mape": 16.48,
+     "bias_pct": -13.85,
+     "worst_abs_pct": 27.22,
+     "best_abs_pct": 1.75,
+     "too_high_quarters": 2
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "mape": 51.23,
+     "bias_pct": 51.23,
+     "worst_abs_pct": 83.87,
+     "best_abs_pct": 29.51,
+     "too_high_quarters": 8
+    }
+   ],
+   "not_inside_pct_range": [
+    45.8,
+    55.3
+   ]
+  },
+  "quarters": [
+   {
+    "snapshot": "2023-10-01",
+    "pipeline_wins": 423,
+    "pipeline": {
+     "open": 742,
+     "await": 5238,
+     "in_window": 784
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 521.2,
+      "error": 98.2,
+      "pct_error": 23.22,
+      "abs_pct_error": 23.22
+     },
+     "learned_stage": {
+      "forecast": 134.5,
+      "error": -288.5,
+      "pct_error": -68.2,
+      "abs_pct_error": 68.2
+     },
+     "time_in_stage": {
+      "forecast": 243.23,
+      "error": -179.77,
+      "pct_error": -42.5,
+      "abs_pct_error": 42.5
+     },
+     "run_rate": {
+      "forecast": 203.0,
+      "error": -220.0,
+      "pct_error": -52.01,
+      "abs_pct_error": 52.01
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 364.4,
+      "error": -58.6,
+      "pct_error": -13.85,
+      "abs_pct_error": 13.85
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 652.6,
+      "error": 229.6,
+      "pct_error": 54.28,
+      "abs_pct_error": 54.28
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 278.04,
+      "error": -144.96,
+      "pct_error": -34.27,
+      "abs_pct_error": 34.27
+     },
+     "run_rate": {
+      "forecast": 285.34,
+      "error": -137.66,
+      "pct_error": -32.54,
+      "abs_pct_error": 32.54
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 225,
+     "fixed": {
+      "forecast": 521.2,
+      "error": 296.2,
+      "pct_error": 131.64,
+      "abs_pct_error": 131.64
+     },
+     "learned_stage": {
+      "forecast": 134.5,
+      "error": -90.5,
+      "pct_error": -40.22,
+      "abs_pct_error": 40.22
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 225,
+     "later": 11,
+     "no_date": 0,
+     "past_due_start_given": 90,
+     "past_due_bid_close": 97,
+     "total": 423,
+     "past_due": 187,
+     "not_inside": 198,
+     "not_inside_pct": 46.8
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 29.8,
+     "await": 26.4
+    },
+    "learned_weights": {
+     "open": 0.17792068595927116,
+     "await": 0.15829145728643215
+    },
+    "flagged": {
+     "deals": 652,
+     "of": 5980,
+     "pct": 10.9,
+     "wins": 150
+    }
+   },
+   {
+    "snapshot": "2024-01-01",
+    "pipeline_wins": 434,
+    "pipeline": {
+     "open": 778,
+     "await": 6420,
+     "in_window": 791
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 528.2,
+      "error": 94.2,
+      "pct_error": 21.71,
+      "abs_pct_error": 21.71
+     },
+     "learned_stage": {
+      "forecast": 146.12,
+      "error": -287.88,
+      "pct_error": -66.33,
+      "abs_pct_error": 66.33
+     },
+     "time_in_stage": {
+      "forecast": 274.1,
+      "error": -159.9,
+      "pct_error": -36.84,
+      "abs_pct_error": 36.84
+     },
+     "run_rate": {
+      "forecast": 280.0,
+      "error": -154.0,
+      "pct_error": -35.48,
+      "abs_pct_error": 35.48
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 370.0,
+      "error": -64.0,
+      "pct_error": -14.75,
+      "abs_pct_error": 14.75
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 659.6,
+      "error": 225.6,
+      "pct_error": 51.98,
+      "abs_pct_error": 51.98
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 325.59,
+      "error": -108.41,
+      "pct_error": -24.98,
+      "abs_pct_error": 24.98
+     },
+     "run_rate": {
+      "forecast": 401.6,
+      "error": -32.4,
+      "pct_error": -7.47,
+      "abs_pct_error": 7.47
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 207,
+     "fixed": {
+      "forecast": 528.2,
+      "error": 321.2,
+      "pct_error": 155.17,
+      "abs_pct_error": 155.17
+     },
+     "learned_stage": {
+      "forecast": 146.12,
+      "error": -60.88,
+      "pct_error": -29.41,
+      "abs_pct_error": 29.41
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 207,
+     "later": 32,
+     "no_date": 0,
+     "past_due_start_given": 80,
+     "past_due_bid_close": 115,
+     "total": 434,
+     "past_due": 195,
+     "not_inside": 227,
+     "not_inside_pct": 52.3
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 28.7,
+     "await": 21.3
+    },
+    "learned_weights": {
+     "open": 0.18756423432682426,
+     "await": 0.1792
+    },
+    "flagged": {
+     "deals": 710,
+     "of": 7198,
+     "pct": 9.9,
+     "wins": 154
+    }
+   },
+   {
+    "snapshot": "2024-04-01",
+    "pipeline_wins": 342,
+    "pipeline": {
+     "open": 512,
+     "await": 7421,
+     "in_window": 688
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 485.6,
+      "error": 143.6,
+      "pct_error": 41.99,
+      "abs_pct_error": 41.99
+     },
+     "learned_stage": {
+      "forecast": 137.41,
+      "error": -204.59,
+      "pct_error": -59.82,
+      "abs_pct_error": 59.82
+     },
+     "time_in_stage": {
+      "forecast": 231.94,
+      "error": -110.06,
+      "pct_error": -32.18,
+      "abs_pct_error": 32.18
+     },
+     "run_rate": {
+      "forecast": 294.0,
+      "error": -48.0,
+      "pct_error": -14.04,
+      "abs_pct_error": 14.04
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 348.0,
+      "error": 6.0,
+      "pct_error": 1.75,
+      "abs_pct_error": 1.75
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 586.8,
+      "error": 244.8,
+      "pct_error": 71.58,
+      "abs_pct_error": 71.58
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 284.77,
+      "error": -57.23,
+      "pct_error": -16.73,
+      "abs_pct_error": 16.73
+     },
+     "run_rate": {
+      "forecast": 434.41,
+      "error": 92.41,
+      "pct_error": 27.02,
+      "abs_pct_error": 27.02
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 180,
+     "fixed": {
+      "forecast": 485.6,
+      "error": 305.6,
+      "pct_error": 169.78,
+      "abs_pct_error": 169.78
+     },
+     "learned_stage": {
+      "forecast": 137.41,
+      "error": -42.59,
+      "pct_error": -23.66,
+      "abs_pct_error": 23.66
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 180,
+     "later": 4,
+     "no_date": 0,
+     "past_due_start_given": 75,
+     "past_due_bid_close": 83,
+     "total": 342,
+     "past_due": 158,
+     "not_inside": 162,
+     "not_inside_pct": 47.4
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 34.6,
+     "await": 18.7
+    },
+    "learned_weights": {
+     "open": 0.2150593089221248,
+     "await": 0.18607442977190877
+    },
+    "flagged": {
+     "deals": 477,
+     "of": 7933,
+     "pct": 6.0,
+     "wins": 111
+    }
+   },
+   {
+    "snapshot": "2024-07-01",
+    "pipeline_wins": 350,
+    "pipeline": {
+     "open": 620,
+     "await": 8047,
+     "in_window": 638
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 426.8,
+      "error": 76.8,
+      "pct_error": 21.94,
+      "abs_pct_error": 21.94
+     },
+     "learned_stage": {
+      "forecast": 142.82,
+      "error": -207.18,
+      "pct_error": -59.19,
+      "abs_pct_error": 59.19
+     },
+     "time_in_stage": {
+      "forecast": 266.59,
+      "error": -83.41,
+      "pct_error": -23.83,
+      "abs_pct_error": 23.83
+     },
+     "run_rate": {
+      "forecast": 224.0,
+      "error": -126.0,
+      "pct_error": -36.0,
+      "abs_pct_error": 36.0
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 299.2,
+      "error": -50.8,
+      "pct_error": -14.51,
+      "abs_pct_error": 14.51
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 532.4,
+      "error": 182.4,
+      "pct_error": 52.11,
+      "abs_pct_error": 52.11
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 323.79,
+      "error": -26.21,
+      "pct_error": -7.49,
+      "abs_pct_error": 7.49
+     },
+     "run_rate": {
+      "forecast": 340.63,
+      "error": -9.37,
+      "pct_error": -2.68,
+      "abs_pct_error": 2.68
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 184,
+     "fixed": {
+      "forecast": 426.8,
+      "error": 242.8,
+      "pct_error": 131.96,
+      "abs_pct_error": 131.96
+     },
+     "learned_stage": {
+      "forecast": 142.82,
+      "error": -41.18,
+      "pct_error": -22.38,
+      "abs_pct_error": 22.38
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 184,
+     "later": 11,
+     "no_date": 0,
+     "past_due_start_given": 69,
+     "past_due_bid_close": 86,
+     "total": 350,
+     "past_due": 155,
+     "not_inside": 166,
+     "not_inside_pct": 47.4
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 29.9,
+     "await": 26.8
+    },
+    "learned_weights": {
+     "open": 0.24916573971078976,
+     "await": 0.17577413479052822
+    },
+    "flagged": {
+     "deals": 575,
+     "of": 8667,
+     "pct": 6.6,
+     "wins": 120
+    }
+   },
+   {
+    "snapshot": "2024-10-01",
+    "pipeline_wins": 407,
+    "pipeline": {
+     "open": 593,
+     "await": 8917,
+     "in_window": 630
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 424.2,
+      "error": 17.2,
+      "pct_error": 4.23,
+      "abs_pct_error": 4.23
+     },
+     "learned_stage": {
+      "forecast": 142.04,
+      "error": -264.96,
+      "pct_error": -65.1,
+      "abs_pct_error": 65.1
+     },
+     "time_in_stage": {
+      "forecast": 277.66,
+      "error": -129.34,
+      "pct_error": -31.78,
+      "abs_pct_error": 31.78
+     },
+     "run_rate": {
+      "forecast": 229.0,
+      "error": -178.0,
+      "pct_error": -43.73,
+      "abs_pct_error": 43.73
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 298.2,
+      "error": -108.8,
+      "pct_error": -26.73,
+      "abs_pct_error": 26.73
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 527.1,
+      "error": 120.1,
+      "pct_error": 29.51,
+      "abs_pct_error": 29.51
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 334.38,
+      "error": -72.62,
+      "pct_error": -17.84,
+      "abs_pct_error": 17.84
+     },
+     "run_rate": {
+      "forecast": 347.71,
+      "error": -59.29,
+      "pct_error": -14.57,
+      "abs_pct_error": 14.57
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 182,
+     "fixed": {
+      "forecast": 424.2,
+      "error": 242.2,
+      "pct_error": 133.08,
+      "abs_pct_error": 133.08
+     },
+     "learned_stage": {
+      "forecast": 142.04,
+      "error": -39.96,
+      "pct_error": -21.96,
+      "abs_pct_error": 21.96
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 182,
+     "later": 20,
+     "no_date": 0,
+     "past_due_start_given": 97,
+     "past_due_bid_close": 108,
+     "total": 407,
+     "past_due": 205,
+     "not_inside": 225,
+     "not_inside_pct": 55.3
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 30.1,
+     "await": 26.8
+    },
+    "learned_weights": {
+     "open": 0.2518105849582173,
+     "await": 0.17992766726943943
+    },
+    "flagged": {
+     "deals": 576,
+     "of": 9510,
+     "pct": 6.1,
+     "wins": 119
+    }
+   },
+   {
+    "snapshot": "2025-01-01",
+    "pipeline_wins": 413,
+    "pipeline": {
+     "open": 662,
+     "await": 9773,
+     "in_window": 663
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 445.4,
+      "error": 32.4,
+      "pct_error": 7.85,
+      "abs_pct_error": 7.85
+     },
+     "learned_stage": {
+      "forecast": 149.66,
+      "error": -263.34,
+      "pct_error": -63.76,
+      "abs_pct_error": 63.76
+     },
+     "time_in_stage": {
+      "forecast": 319.65,
+      "error": -93.35,
+      "pct_error": -22.6,
+      "abs_pct_error": 22.6
+     },
+     "run_rate": {
+      "forecast": 290.0,
+      "error": -123.0,
+      "pct_error": -29.78,
+      "abs_pct_error": 29.78
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 312.8,
+      "error": -100.2,
+      "pct_error": -24.26,
+      "abs_pct_error": 24.26
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 554.2,
+      "error": 141.2,
+      "pct_error": 34.19,
+      "abs_pct_error": 34.19
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 390.41,
+      "error": -22.59,
+      "pct_error": -5.47,
+      "abs_pct_error": 5.47
+     },
+     "run_rate": {
+      "forecast": 448.0,
+      "error": 35.0,
+      "pct_error": 8.48,
+      "abs_pct_error": 8.48
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 192,
+     "fixed": {
+      "forecast": 445.4,
+      "error": 253.4,
+      "pct_error": 131.98,
+      "abs_pct_error": 131.98
+     },
+     "learned_stage": {
+      "forecast": 149.66,
+      "error": -42.34,
+      "pct_error": -22.05,
+      "abs_pct_error": 22.05
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 192,
+     "later": 33,
+     "no_date": 0,
+     "past_due_start_given": 97,
+     "past_due_bid_close": 91,
+     "total": 413,
+     "past_due": 188,
+     "not_inside": 221,
+     "not_inside_pct": 53.5
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 31.5,
+     "await": 24.4
+    },
+    "learned_weights": {
+     "open": 0.2481971153846154,
+     "await": 0.18559556786703602
+    },
+    "flagged": {
+     "deals": 654,
+     "of": 10435,
+     "pct": 6.3,
+     "wins": 136
+    }
+   },
+   {
+    "snapshot": "2025-04-01",
+    "pipeline_wins": 323,
+    "pipeline": {
+     "open": 502,
+     "await": 10569,
+     "in_window": 697
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 490.8,
+      "error": 167.8,
+      "pct_error": 51.95,
+      "abs_pct_error": 51.95
+     },
+     "learned_stage": {
+      "forecast": 163.15,
+      "error": -159.85,
+      "pct_error": -49.49,
+      "abs_pct_error": 49.49
+     },
+     "time_in_stage": {
+      "forecast": 299.56,
+      "error": -23.44,
+      "pct_error": -7.26,
+      "abs_pct_error": 7.26
+     },
+     "run_rate": {
+      "forecast": 292.0,
+      "error": -31.0,
+      "pct_error": -9.6,
+      "abs_pct_error": 9.6
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 351.4,
+      "error": 28.4,
+      "pct_error": 8.79,
+      "abs_pct_error": 8.79
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 593.9,
+      "error": 270.9,
+      "pct_error": 83.87,
+      "abs_pct_error": 83.87
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 374.07,
+      "error": 51.07,
+      "pct_error": 15.81,
+      "abs_pct_error": 15.81
+     },
+     "run_rate": {
+      "forecast": 459.47,
+      "error": 136.47,
+      "pct_error": 42.25,
+      "abs_pct_error": 42.25
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 175,
+     "fixed": {
+      "forecast": 490.8,
+      "error": 315.8,
+      "pct_error": 180.46,
+      "abs_pct_error": 180.46
+     },
+     "learned_stage": {
+      "forecast": 163.15,
+      "error": -11.85,
+      "pct_error": -6.77,
+      "abs_pct_error": 6.77
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 175,
+     "later": 5,
+     "no_date": 0,
+     "past_due_start_given": 61,
+     "past_due_bid_close": 82,
+     "total": 323,
+     "past_due": 143,
+     "not_inside": 148,
+     "not_inside_pct": 45.8
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 29.9,
+     "await": 20.7
+    },
+    "learned_weights": {
+     "open": 0.2624521072796935,
+     "await": 0.20797720797720798
+    },
+    "flagged": {
+     "deals": 529,
+     "of": 11071,
+     "pct": 4.8,
+     "wins": 100
+    }
+   },
+   {
+    "snapshot": "2025-07-01",
+    "pipeline_wins": 421,
+    "pipeline": {
+     "open": 692,
+     "await": 11072,
+     "in_window": 673
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 441.0,
+      "error": 20.0,
+      "pct_error": 4.75,
+      "abs_pct_error": 4.75
+     },
+     "learned_stage": {
+      "forecast": 166.96,
+      "error": -254.04,
+      "pct_error": -60.34,
+      "abs_pct_error": 60.34
+     },
+     "time_in_stage": {
+      "forecast": 319.08,
+      "error": -101.92,
+      "pct_error": -24.21,
+      "abs_pct_error": 24.21
+     },
+     "run_rate": {
+      "forecast": 245.0,
+      "error": -176.0,
+      "pct_error": -41.81,
+      "abs_pct_error": 41.81
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 306.4,
+      "error": -114.6,
+      "pct_error": -27.22,
+      "abs_pct_error": 27.22
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 557.0,
+      "error": 136.0,
+      "pct_error": 32.3,
+      "abs_pct_error": 32.3
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 391.2,
+      "error": -29.8,
+      "pct_error": -7.08,
+      "abs_pct_error": 7.08
+     },
+     "run_rate": {
+      "forecast": 384.86,
+      "error": -36.14,
+      "pct_error": -8.58,
+      "abs_pct_error": 8.58
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 212,
+     "fixed": {
+      "forecast": 441.0,
+      "error": 229.0,
+      "pct_error": 108.02,
+      "abs_pct_error": 108.02
+     },
+     "learned_stage": {
+      "forecast": 166.96,
+      "error": -45.04,
+      "pct_error": -21.24,
+      "abs_pct_error": 21.24
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 212,
+     "later": 14,
+     "no_date": 0,
+     "past_due_start_given": 85,
+     "past_due_bid_close": 110,
+     "total": 421,
+     "past_due": 195,
+     "not_inside": 209,
+     "not_inside_pct": 49.6
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 31.6,
+     "await": 31.2
+    },
+    "learned_weights": {
+     "open": 0.26078680203045684,
+     "await": 0.21482889733840305
+    },
+    "flagged": {
+     "deals": 801,
+     "of": 11764,
+     "pct": 6.8,
+     "wins": 184
+    }
+   }
+  ]
+ },
+ "drop_flagged": {
+  "summary": {
+   "fixed": {
+    "mape": 23.39,
+    "bias_pct": -4.81,
+    "worst_abs_pct": 38.12,
+    "best_abs_pct": 7.69,
+    "too_high_quarters": 2,
+    "best_in_quarters": 5,
+    "covered80": 0
+   },
+   "learned_stage": {
+    "mape": 76.38,
+    "bias_pct": -76.38,
+    "worst_abs_pct": 82.58,
+    "best_abs_pct": 62.18,
+    "too_high_quarters": 0,
+    "best_in_quarters": 0,
+    "covered80": 0
+   },
+   "time_in_stage": {
+    "mape": 29.24,
+    "bias_pct": -29.24,
+    "worst_abs_pct": 43.21,
+    "best_abs_pct": 3.66,
+    "too_high_quarters": 0,
+    "best_in_quarters": 1,
+    "covered80": 1
+   },
+   "run_rate": {
+    "mape": 31.72,
+    "bias_pct": -31.72,
+    "worst_abs_pct": 53.11,
+    "best_abs_pct": 12.11,
+    "too_high_quarters": 0,
+    "best_in_quarters": 2
+   },
+   "corrected": {
+    "time_in_stage": {
+     "mape": 19.04,
+     "bias_pct": -13.98,
+     "worst_abs_pct": 35.32,
+     "best_abs_pct": 8.66,
+     "too_high_quarters": 1
+    },
+    "run_rate": {
+     "mape": 19.26,
+     "bias_pct": 3.28,
+     "worst_abs_pct": 38.3,
+     "best_abs_pct": 2.48,
+     "too_high_quarters": 5
+    }
+   },
+   "same_target": {
+    "fixed": {
+     "mape": 198.33,
+     "bias_pct": 198.33,
+     "worst_abs_pct": 293.25,
+     "best_abs_pct": 125.15,
+     "too_high_quarters": 8
+    },
+    "learned_stage": {
+     "mape": 26.09,
+     "bias_pct": -26.09,
+     "worst_abs_pct": 38.21,
+     "best_abs_pct": 3.05,
+     "too_high_quarters": 0
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "mape": 30.65,
+     "bias_pct": -29.74,
+     "worst_abs_pct": 53.76,
+     "best_abs_pct": 1.13,
+     "too_high_quarters": 2
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "mape": 23.14,
+     "bias_pct": 9.91,
+     "worst_abs_pct": 58.07,
+     "best_abs_pct": 4.78,
+     "too_high_quarters": 5
+    }
+   ],
+   "not_inside_pct_range": [
+    61.0,
+    74.0
+   ]
+  },
+  "quarters": [
+   {
+    "snapshot": "2023-10-01",
+    "pipeline_wins": 273,
+    "pipeline": {
+     "open": 130,
+     "await": 5198,
+     "in_window": 337
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 252.0,
+      "error": -21.0,
+      "pct_error": -7.69,
+      "abs_pct_error": 7.69
+     },
+     "learned_stage": {
+      "forecast": 56.49,
+      "error": -216.51,
+      "pct_error": -79.31,
+      "abs_pct_error": 79.31
+     },
+     "time_in_stage": {
+      "forecast": 155.03,
+      "error": -117.97,
+      "pct_error": -43.21,
+      "abs_pct_error": 43.21
+     },
+     "run_rate": {
+      "forecast": 128.0,
+      "error": -145.0,
+      "pct_error": -53.11,
+      "abs_pct_error": 53.11
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 184.6,
+      "error": -88.4,
+      "pct_error": -32.38,
+      "abs_pct_error": 32.38
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 294.5,
+      "error": 21.5,
+      "pct_error": 7.88,
+      "abs_pct_error": 7.88
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 176.58,
+      "error": -96.42,
+      "pct_error": -35.32,
+      "abs_pct_error": 35.32
+     },
+     "run_rate": {
+      "forecast": 179.92,
+      "error": -93.08,
+      "pct_error": -34.09,
+      "abs_pct_error": 34.09
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 89,
+     "fixed": {
+      "forecast": 252.0,
+      "error": 163.0,
+      "pct_error": 183.15,
+      "abs_pct_error": 183.15
+     },
+     "learned_stage": {
+      "forecast": 56.49,
+      "error": -32.51,
+      "pct_error": -36.53,
+      "abs_pct_error": 36.53
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 89,
+     "later": 8,
+     "no_date": 0,
+     "past_due_start_given": 81,
+     "past_due_bid_close": 95,
+     "total": 273,
+     "past_due": 176,
+     "not_inside": 184,
+     "not_inside_pct": 67.4
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 26.1,
+     "await": 26.5
+    },
+    "learned_weights": {
+     "open": 0.18628719275549807,
+     "await": 0.16103896103896104
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 5328,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2024-01-01",
+    "pipeline_wins": 280,
+    "pipeline": {
+     "open": 116,
+     "await": 6372,
+     "in_window": 337
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 255.0,
+      "error": -25.0,
+      "pct_error": -8.93,
+      "abs_pct_error": 8.93
+     },
+     "learned_stage": {
+      "forecast": 60.53,
+      "error": -219.47,
+      "pct_error": -78.38,
+      "abs_pct_error": 78.38
+     },
+     "time_in_stage": {
+      "forecast": 170.17,
+      "error": -109.83,
+      "pct_error": -39.23,
+      "abs_pct_error": 39.23
+     },
+     "run_rate": {
+      "forecast": 183.0,
+      "error": -97.0,
+      "pct_error": -34.64,
+      "abs_pct_error": 34.64
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 187.6,
+      "error": -92.4,
+      "pct_error": -33.0,
+      "abs_pct_error": 33.0
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 296.0,
+      "error": 16.0,
+      "pct_error": 5.71,
+      "abs_pct_error": 5.71
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 201.47,
+      "error": -78.53,
+      "pct_error": -28.05,
+      "abs_pct_error": 28.05
+     },
+     "run_rate": {
+      "forecast": 262.47,
+      "error": -17.53,
+      "pct_error": -6.26,
+      "abs_pct_error": 6.26
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 81,
+     "fixed": {
+      "forecast": 255.0,
+      "error": 174.0,
+      "pct_error": 214.81,
+      "abs_pct_error": 214.81
+     },
+     "learned_stage": {
+      "forecast": 60.53,
+      "error": -20.47,
+      "pct_error": -25.27,
+      "abs_pct_error": 25.27
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 81,
+     "later": 13,
+     "no_date": 0,
+     "past_due_start_given": 72,
+     "past_due_bid_close": 114,
+     "total": 280,
+     "past_due": 186,
+     "not_inside": 199,
+     "not_inside_pct": 71.1
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 32.9,
+     "await": 21.6
+    },
+    "learned_weights": {
+     "open": 0.17384370015948963,
+     "await": 0.1812191103789127
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 6488,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2024-04-01",
+    "pipeline_wins": 231,
+    "pipeline": {
+     "open": 87,
+     "await": 7369,
+     "in_window": 405
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 314.6,
+      "error": 83.6,
+      "pct_error": 36.19,
+      "abs_pct_error": 36.19
+     },
+     "learned_stage": {
+      "forecast": 75.08,
+      "error": -155.92,
+      "pct_error": -67.5,
+      "abs_pct_error": 67.5
+     },
+     "time_in_stage": {
+      "forecast": 164.88,
+      "error": -66.12,
+      "pct_error": -28.62,
+      "abs_pct_error": 28.62
+     },
+     "run_rate": {
+      "forecast": 183.0,
+      "error": -48.0,
+      "pct_error": -20.78,
+      "abs_pct_error": 20.78
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 233.6,
+      "error": 2.6,
+      "pct_error": 1.13,
+      "abs_pct_error": 1.13
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 359.8,
+      "error": 128.8,
+      "pct_error": 55.76,
+      "abs_pct_error": 55.76
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 202.3,
+      "error": -28.7,
+      "pct_error": -12.42,
+      "abs_pct_error": 12.42
+     },
+     "run_rate": {
+      "forecast": 270.4,
+      "error": 39.4,
+      "pct_error": 17.06,
+      "abs_pct_error": 17.06
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 80,
+     "fixed": {
+      "forecast": 314.6,
+      "error": 234.6,
+      "pct_error": 293.25,
+      "abs_pct_error": 293.25
+     },
+     "learned_stage": {
+      "forecast": 75.08,
+      "error": -4.92,
+      "pct_error": -6.15,
+      "abs_pct_error": 6.15
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 80,
+     "later": 1,
+     "no_date": 0,
+     "past_due_start_given": 68,
+     "past_due_bid_close": 82,
+     "total": 231,
+     "past_due": 150,
+     "not_inside": 151,
+     "not_inside_pct": 65.4
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 27.7,
+     "await": 18.7
+    },
+    "learned_weights": {
+     "open": 0.16393442622950818,
+     "await": 0.1881918819188192
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 7456,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2024-07-01",
+    "pipeline_wins": 230,
+    "pipeline": {
+     "open": 112,
+     "await": 7980,
+     "in_window": 275
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 207.0,
+      "error": -23.0,
+      "pct_error": -10.0,
+      "abs_pct_error": 10.0
+     },
+     "learned_stage": {
+      "forecast": 48.81,
+      "error": -181.19,
+      "pct_error": -78.78,
+      "abs_pct_error": 78.78
+     },
+     "time_in_stage": {
+      "forecast": 164.39,
+      "error": -65.61,
+      "pct_error": -28.53,
+      "abs_pct_error": 28.53
+     },
+     "run_rate": {
+      "forecast": 155.0,
+      "error": -75.0,
+      "pct_error": -32.61,
+      "abs_pct_error": 32.61
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 152.0,
+      "error": -78.0,
+      "pct_error": -33.91,
+      "abs_pct_error": 33.91
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 241.0,
+      "error": 11.0,
+      "pct_error": 4.78,
+      "abs_pct_error": 4.78
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 200.87,
+      "error": -29.13,
+      "pct_error": -12.66,
+      "abs_pct_error": 12.66
+     },
+     "run_rate": {
+      "forecast": 235.7,
+      "error": 5.7,
+      "pct_error": 2.48,
+      "abs_pct_error": 2.48
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 79,
+     "fixed": {
+      "forecast": 207.0,
+      "error": 128.0,
+      "pct_error": 162.03,
+      "abs_pct_error": 162.03
+     },
+     "learned_stage": {
+      "forecast": 48.81,
+      "error": -30.19,
+      "pct_error": -38.21,
+      "abs_pct_error": 38.21
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 79,
+     "later": 5,
+     "no_date": 0,
+     "past_due_start_given": 61,
+     "past_due_bid_close": 85,
+     "total": 230,
+     "past_due": 146,
+     "not_inside": 151,
+     "not_inside_pct": 65.7
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 30.8,
+     "await": 28.1
+    },
+    "learned_weights": {
+     "open": 0.18045112781954886,
+     "await": 0.17657992565055763
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 8092,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2024-10-01",
+    "pipeline_wins": 288,
+    "pipeline": {
+     "open": 92,
+     "await": 8842,
+     "in_window": 275
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 210.4,
+      "error": -77.6,
+      "pct_error": -26.94,
+      "abs_pct_error": 26.94
+     },
+     "learned_stage": {
+      "forecast": 50.16,
+      "error": -237.84,
+      "pct_error": -82.58,
+      "abs_pct_error": 82.58
+     },
+     "time_in_stage": {
+      "forecast": 178.01,
+      "error": -109.99,
+      "pct_error": -38.19,
+      "abs_pct_error": 38.19
+     },
+     "run_rate": {
+      "forecast": 145.0,
+      "error": -143.0,
+      "pct_error": -49.65,
+      "abs_pct_error": 49.65
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 155.4,
+      "error": -132.6,
+      "pct_error": -46.04,
+      "abs_pct_error": 46.04
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 242.7,
+      "error": -45.3,
+      "pct_error": -15.73,
+      "abs_pct_error": 15.73
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 214.63,
+      "error": -73.37,
+      "pct_error": -25.48,
+      "abs_pct_error": 25.48
+     },
+     "run_rate": {
+      "forecast": 220.17,
+      "error": -67.83,
+      "pct_error": -23.55,
+      "abs_pct_error": 23.55
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 75,
+     "fixed": {
+      "forecast": 210.4,
+      "error": 135.4,
+      "pct_error": 180.53,
+      "abs_pct_error": 180.53
+     },
+     "learned_stage": {
+      "forecast": 50.16,
+      "error": -24.84,
+      "pct_error": -33.12,
+      "abs_pct_error": 33.12
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 75,
+     "later": 14,
+     "no_date": 0,
+     "past_due_start_given": 92,
+     "past_due_bid_close": 107,
+     "total": 288,
+     "past_due": 199,
+     "not_inside": 213,
+     "not_inside_pct": 74.0
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 29.2,
+     "await": 26.9
+    },
+    "learned_weights": {
+     "open": 0.18315018315018314,
+     "await": 0.1822386679000925
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 8934,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2025-01-01",
+    "pipeline_wins": 277,
+    "pipeline": {
+     "open": 102,
+     "await": 9679,
+     "in_window": 284
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 216.2,
+      "error": -60.8,
+      "pct_error": -21.95,
+      "abs_pct_error": 21.95
+     },
+     "learned_stage": {
+      "forecast": 53.63,
+      "error": -223.37,
+      "pct_error": -80.64,
+      "abs_pct_error": 80.64
+     },
+     "time_in_stage": {
+      "forecast": 203.53,
+      "error": -73.47,
+      "pct_error": -26.52,
+      "abs_pct_error": 26.52
+     },
+     "run_rate": {
+      "forecast": 205.0,
+      "error": -72.0,
+      "pct_error": -25.99,
+      "abs_pct_error": 25.99
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 159.4,
+      "error": -117.6,
+      "pct_error": -42.45,
+      "abs_pct_error": 42.45
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 250.1,
+      "error": -26.9,
+      "pct_error": -9.71,
+      "abs_pct_error": 9.71
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 250.74,
+      "error": -26.26,
+      "pct_error": -9.48,
+      "abs_pct_error": 9.48
+     },
+     "run_rate": {
+      "forecast": 316.69,
+      "error": 39.69,
+      "pct_error": 14.33,
+      "abs_pct_error": 14.33
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 79,
+     "fixed": {
+      "forecast": 216.2,
+      "error": 137.2,
+      "pct_error": 173.67,
+      "abs_pct_error": 173.67
+     },
+     "learned_stage": {
+      "forecast": 53.63,
+      "error": -25.37,
+      "pct_error": -32.11,
+      "abs_pct_error": 32.11
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 79,
+     "later": 19,
+     "no_date": 0,
+     "past_due_start_given": 89,
+     "past_due_bid_close": 90,
+     "total": 277,
+     "past_due": 179,
+     "not_inside": 198,
+     "not_inside_pct": 71.5
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 38.2,
+     "await": 25.3
+    },
+    "learned_weights": {
+     "open": 0.1888412017167382,
+     "await": 0.18885741265344666
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 9781,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2025-04-01",
+    "pipeline_wins": 223,
+    "pipeline": {
+     "open": 91,
+     "await": 10451,
+     "in_window": 397
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 308.0,
+      "error": 85.0,
+      "pct_error": 38.12,
+      "abs_pct_error": 38.12
+     },
+     "learned_stage": {
+      "forecast": 84.35,
+      "error": -138.65,
+      "pct_error": -62.18,
+      "abs_pct_error": 62.18
+     },
+     "time_in_stage": {
+      "forecast": 214.85,
+      "error": -8.15,
+      "pct_error": -3.66,
+      "abs_pct_error": 3.66
+     },
+     "run_rate": {
+      "forecast": 196.0,
+      "error": -27.0,
+      "pct_error": -12.11,
+      "abs_pct_error": 12.11
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": true
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 228.6,
+      "error": 5.6,
+      "pct_error": 2.51,
+      "abs_pct_error": 2.51
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 352.5,
+      "error": 129.5,
+      "pct_error": 58.07,
+      "abs_pct_error": 58.07
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 268.06,
+      "error": 45.06,
+      "pct_error": 20.21,
+      "abs_pct_error": 20.21
+     },
+     "run_rate": {
+      "forecast": 308.41,
+      "error": 85.41,
+      "pct_error": 38.3,
+      "abs_pct_error": 38.3
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 87,
+     "fixed": {
+      "forecast": 308.0,
+      "error": 221.0,
+      "pct_error": 254.02,
+      "abs_pct_error": 254.02
+     },
+     "learned_stage": {
+      "forecast": 84.35,
+      "error": -2.65,
+      "pct_error": -3.05,
+      "abs_pct_error": 3.05
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 87,
+     "later": 3,
+     "no_date": 0,
+     "past_due_start_given": 57,
+     "past_due_bid_close": 76,
+     "total": 223,
+     "past_due": 133,
+     "not_inside": 136,
+     "not_inside_pct": 61.0
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 25.0,
+     "await": 21.5
+    },
+    "learned_weights": {
+     "open": 0.20930232558139536,
+     "await": 0.212890625
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 10542,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2025-07-01",
+    "pipeline_wins": 237,
+    "pipeline": {
+     "open": 79,
+     "await": 10884,
+     "in_window": 195
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 148.6,
+      "error": -88.4,
+      "pct_error": -37.3,
+      "abs_pct_error": 37.3
+     },
+     "learned_stage": {
+      "forecast": 43.4,
+      "error": -193.6,
+      "pct_error": -81.69,
+      "abs_pct_error": 81.69
+     },
+     "time_in_stage": {
+      "forecast": 175.45,
+      "error": -61.55,
+      "pct_error": -25.97,
+      "abs_pct_error": 25.97
+     },
+     "run_rate": {
+      "forecast": 178.0,
+      "error": -59.0,
+      "pct_error": -24.89,
+      "abs_pct_error": 24.89
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 109.6,
+      "error": -127.4,
+      "pct_error": -53.76,
+      "abs_pct_error": 53.76
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 171.8,
+      "error": -65.2,
+      "pct_error": -27.51,
+      "abs_pct_error": 27.51
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 216.47,
+      "error": -20.53,
+      "pct_error": -8.66,
+      "abs_pct_error": 8.66
+     },
+     "run_rate": {
+      "forecast": 279.61,
+      "error": 42.61,
+      "pct_error": 17.98,
+      "abs_pct_error": 17.98
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 66,
+     "fixed": {
+      "forecast": 148.6,
+      "error": 82.6,
+      "pct_error": 125.15,
+      "abs_pct_error": 125.15
+     },
+     "learned_stage": {
+      "forecast": 43.4,
+      "error": -22.6,
+      "pct_error": -34.24,
+      "abs_pct_error": 34.24
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 66,
+     "later": 6,
+     "no_date": 0,
+     "past_due_start_given": 63,
+     "past_due_bid_close": 102,
+     "total": 237,
+     "past_due": 165,
+     "not_inside": 171,
+     "not_inside_pct": 72.2
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 37.8,
+     "await": 32.9
+    },
+    "learned_weights": {
+     "open": 0.2222222222222222,
+     "await": 0.22266009852216748
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 10963,
+     "pct": 0.0,
+     "wins": 0
+    }
+   }
+  ]
+ },
+ "v1_rerun": {
+  "summary": {
+   "fixed": {
+    "mape": 22.72,
+    "bias_pct": 22.72,
+    "worst_abs_pct": 49.85,
+    "best_abs_pct": 3.33,
+    "too_high_quarters": 8,
+    "best_in_quarters": 6,
+    "covered80": 1
+   },
+   "learned_stage": {
+    "mape": 61.22,
+    "bias_pct": -61.22,
+    "worst_abs_pct": 67.5,
+    "best_abs_pct": 49.69,
+    "too_high_quarters": 0,
+    "best_in_quarters": 0,
+    "covered80": 0
+   },
+   "time_in_stage": {
+    "mape": 27.78,
+    "bias_pct": -27.78,
+    "worst_abs_pct": 42.44,
+    "best_abs_pct": 7.48,
+    "too_high_quarters": 0,
+    "best_in_quarters": 1,
+    "covered80": 0
+   },
+   "run_rate": {
+    "mape": 33.0,
+    "bias_pct": -33.0,
+    "worst_abs_pct": 51.88,
+    "best_abs_pct": 9.79,
+    "too_high_quarters": 0,
+    "best_in_quarters": 1
+   },
+   "corrected": {
+    "time_in_stage": {
+     "mape": 16.31,
+     "bias_pct": -12.42,
+     "worst_abs_pct": 34.18,
+     "best_abs_pct": 6.38,
+     "too_high_quarters": 1
+    },
+    "run_rate": {
+     "mape": 17.96,
+     "bias_pct": 1.19,
+     "worst_abs_pct": 41.96,
+     "best_abs_pct": 2.68,
+     "too_high_quarters": 3
+    }
+   },
+   "same_target": {
+    "fixed": {
+     "mape": 139.84,
+     "bias_pct": 139.84,
+     "worst_abs_pct": 173.74,
+     "best_abs_pct": 102.86,
+     "too_high_quarters": 8
+    },
+    "learned_stage": {
+     "mape": 24.11,
+     "bias_pct": -24.11,
+     "worst_abs_pct": 39.27,
+     "best_abs_pct": 8.1,
+     "too_high_quarters": 0
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "mape": 16.08,
+     "bias_pct": -13.67,
+     "worst_abs_pct": 28.36,
+     "best_abs_pct": 2.62,
+     "too_high_quarters": 2
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "mape": 52.31,
+     "bias_pct": 52.31,
+     "worst_abs_pct": 81.96,
+     "best_abs_pct": 30.89,
+     "too_high_quarters": 8
+    }
+   ],
+   "not_inside_pct_range": [
+    45.3,
+    54.3
+   ]
+  },
+  "quarters": [
+   {
+    "snapshot": "2023-10-01",
+    "pipeline_wins": 426,
+    "pipeline": {
+     "open": 845,
+     "await": 5172,
+     "in_window": 804
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 531.6,
+      "error": 105.6,
+      "pct_error": 24.79,
+      "abs_pct_error": 24.79
+     },
+     "learned_stage": {
+      "forecast": 138.47,
+      "error": -287.53,
+      "pct_error": -67.5,
+      "abs_pct_error": 67.5
+     },
+     "time_in_stage": {
+      "forecast": 245.21,
+      "error": -180.79,
+      "pct_error": -42.44,
+      "abs_pct_error": 42.44
+     },
+     "run_rate": {
+      "forecast": 205.0,
+      "error": -221.0,
+      "pct_error": -51.88,
+      "abs_pct_error": 51.88
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 370.8,
+      "error": -55.2,
+      "pct_error": -12.96,
+      "abs_pct_error": 12.96
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 667.8,
+      "error": 241.8,
+      "pct_error": 56.76,
+      "abs_pct_error": 56.76
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 280.39,
+      "error": -145.61,
+      "pct_error": -34.18,
+      "abs_pct_error": 34.18
+     },
+     "run_rate": {
+      "forecast": 288.15,
+      "error": -137.85,
+      "pct_error": -32.36,
+      "abs_pct_error": 32.36
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 228,
+     "fixed": {
+      "forecast": 531.6,
+      "error": 303.6,
+      "pct_error": 133.16,
+      "abs_pct_error": 133.16
+     },
+     "learned_stage": {
+      "forecast": 138.47,
+      "error": -89.53,
+      "pct_error": -39.27,
+      "abs_pct_error": 39.27
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 228,
+     "later": 12,
+     "no_date": 0,
+     "past_due_start_given": 89,
+     "past_due_bid_close": 97,
+     "total": 426,
+     "past_due": 186,
+     "not_inside": 198,
+     "not_inside_pct": 46.5
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 29.0,
+     "await": 26.8
+    },
+    "learned_weights": {
+     "open": 0.17793964620187305,
+     "await": 0.15926892950391644
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 6017,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2024-01-01",
+    "pipeline_wins": 435,
+    "pipeline": {
+     "open": 861,
+     "await": 6358,
+     "in_window": 794
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 529.2,
+      "error": 94.2,
+      "pct_error": 21.66,
+      "abs_pct_error": 21.66
+     },
+     "learned_stage": {
+      "forecast": 145.94,
+      "error": -289.06,
+      "pct_error": -66.45,
+      "abs_pct_error": 66.45
+     },
+     "time_in_stage": {
+      "forecast": 275.23,
+      "error": -159.77,
+      "pct_error": -36.73,
+      "abs_pct_error": 36.73
+     },
+     "run_rate": {
+      "forecast": 281.0,
+      "error": -154.0,
+      "pct_error": -35.4,
+      "abs_pct_error": 35.4
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 370.4,
+      "error": -64.6,
+      "pct_error": -14.85,
+      "abs_pct_error": 14.85
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 661.6,
+      "error": 226.6,
+      "pct_error": 52.09,
+      "abs_pct_error": 52.09
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 326.84,
+      "error": -108.16,
+      "pct_error": -24.87,
+      "abs_pct_error": 24.87
+     },
+     "run_rate": {
+      "forecast": 403.03,
+      "error": -31.97,
+      "pct_error": -7.35,
+      "abs_pct_error": 7.35
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 210,
+     "fixed": {
+      "forecast": 529.2,
+      "error": 319.2,
+      "pct_error": 152.0,
+      "abs_pct_error": 152.0
+     },
+     "learned_stage": {
+      "forecast": 145.94,
+      "error": -64.06,
+      "pct_error": -30.51,
+      "abs_pct_error": 30.51
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 210,
+     "later": 33,
+     "no_date": 0,
+     "past_due_start_given": 82,
+     "past_due_bid_close": 110,
+     "total": 435,
+     "past_due": 192,
+     "not_inside": 225,
+     "not_inside_pct": 51.7
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 28.9,
+     "await": 21.6
+    },
+    "learned_weights": {
+     "open": 0.18672610203070827,
+     "await": 0.17792421746293247
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 7219,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2024-04-01",
+    "pipeline_wins": 344,
+    "pipeline": {
+     "open": 620,
+     "await": 7354,
+     "in_window": 704
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 493.8,
+      "error": 149.8,
+      "pct_error": 43.55,
+      "abs_pct_error": 43.55
+     },
+     "learned_stage": {
+      "forecast": 140.02,
+      "error": -203.98,
+      "pct_error": -59.3,
+      "abs_pct_error": 59.3
+     },
+     "time_in_stage": {
+      "forecast": 234.55,
+      "error": -109.45,
+      "pct_error": -31.82,
+      "abs_pct_error": 31.82
+     },
+     "run_rate": {
+      "forecast": 295.0,
+      "error": -49.0,
+      "pct_error": -14.24,
+      "abs_pct_error": 14.24
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 353.0,
+      "error": 9.0,
+      "pct_error": 2.62,
+      "abs_pct_error": 2.62
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 598.9,
+      "error": 254.9,
+      "pct_error": 74.1,
+      "abs_pct_error": 74.1
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 287.96,
+      "error": -56.04,
+      "pct_error": -16.29,
+      "abs_pct_error": 16.29
+     },
+     "run_rate": {
+      "forecast": 435.89,
+      "error": 91.89,
+      "pct_error": 26.71,
+      "abs_pct_error": 26.71
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 184,
+     "fixed": {
+      "forecast": 493.8,
+      "error": 309.8,
+      "pct_error": 168.37,
+      "abs_pct_error": 168.37
+     },
+     "learned_stage": {
+      "forecast": 140.02,
+      "error": -43.98,
+      "pct_error": -23.9,
+      "abs_pct_error": 23.9
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 184,
+     "later": 4,
+     "no_date": 0,
+     "past_due_start_given": 75,
+     "past_due_bid_close": 81,
+     "total": 344,
+     "past_due": 156,
+     "not_inside": 160,
+     "not_inside_pct": 46.5
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 33.7,
+     "await": 18.8
+    },
+    "learned_weights": {
+     "open": 0.21392785571142284,
+     "await": 0.18427518427518427
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 7974,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2024-07-01",
+    "pipeline_wins": 350,
+    "pipeline": {
+     "open": 734,
+     "await": 7979,
+     "in_window": 645
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 429.8,
+      "error": 79.8,
+      "pct_error": 22.8,
+      "abs_pct_error": 22.8
+     },
+     "learned_stage": {
+      "forecast": 143.13,
+      "error": -206.87,
+      "pct_error": -59.11,
+      "abs_pct_error": 59.11
+     },
+     "time_in_stage": {
+      "forecast": 268.47,
+      "error": -81.53,
+      "pct_error": -23.29,
+      "abs_pct_error": 23.29
+     },
+     "run_rate": {
+      "forecast": 224.0,
+      "error": -126.0,
+      "pct_error": -36.0,
+      "abs_pct_error": 36.0
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 300.8,
+      "error": -49.2,
+      "pct_error": -14.06,
+      "abs_pct_error": 14.06
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 537.4,
+      "error": 187.4,
+      "pct_error": 53.54,
+      "abs_pct_error": 53.54
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 325.93,
+      "error": -24.07,
+      "pct_error": -6.88,
+      "abs_pct_error": 6.88
+     },
+     "run_rate": {
+      "forecast": 340.63,
+      "error": -9.37,
+      "pct_error": -2.68,
+      "abs_pct_error": 2.68
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 189,
+     "fixed": {
+      "forecast": 429.8,
+      "error": 240.8,
+      "pct_error": 127.41,
+      "abs_pct_error": 127.41
+     },
+     "learned_stage": {
+      "forecast": 143.13,
+      "error": -45.87,
+      "pct_error": -24.27,
+      "abs_pct_error": 24.27
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 189,
+     "later": 11,
+     "no_date": 0,
+     "past_due_start_given": 69,
+     "past_due_bid_close": 81,
+     "total": 350,
+     "past_due": 150,
+     "not_inside": 161,
+     "not_inside_pct": 46.0
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 30.2,
+     "await": 27.6
+    },
+    "learned_weights": {
+     "open": 0.24493062966915688,
+     "await": 0.17553688141923435
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 8713,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2024-10-01",
+    "pipeline_wins": 411,
+    "pipeline": {
+     "open": 708,
+     "await": 8848,
+     "in_window": 654
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 437.0,
+      "error": 26.0,
+      "pct_error": 6.33,
+      "abs_pct_error": 6.33
+     },
+     "learned_stage": {
+      "forecast": 147.33,
+      "error": -263.67,
+      "pct_error": -64.15,
+      "abs_pct_error": 64.15
+     },
+     "time_in_stage": {
+      "forecast": 278.92,
+      "error": -132.08,
+      "pct_error": -32.14,
+      "abs_pct_error": 32.14
+     },
+     "run_rate": {
+      "forecast": 229.0,
+      "error": -182.0,
+      "pct_error": -44.28,
+      "abs_pct_error": 44.28
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 306.2,
+      "error": -104.8,
+      "pct_error": -25.5,
+      "abs_pct_error": 25.5
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 545.5,
+      "error": 134.5,
+      "pct_error": 32.73,
+      "abs_pct_error": 32.73
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 335.76,
+      "error": -75.24,
+      "pct_error": -18.31,
+      "abs_pct_error": 18.31
+     },
+     "run_rate": {
+      "forecast": 347.71,
+      "error": -63.29,
+      "pct_error": -15.4,
+      "abs_pct_error": 15.4
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 188,
+     "fixed": {
+      "forecast": 437.0,
+      "error": 249.0,
+      "pct_error": 132.45,
+      "abs_pct_error": 132.45
+     },
+     "learned_stage": {
+      "forecast": 147.33,
+      "error": -40.67,
+      "pct_error": -21.64,
+      "abs_pct_error": 21.64
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 188,
+     "later": 21,
+     "no_date": 0,
+     "past_due_start_given": 96,
+     "past_due_bid_close": 106,
+     "total": 411,
+     "past_due": 202,
+     "not_inside": 223,
+     "not_inside_pct": 54.3
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 29.2,
+     "await": 27.8
+    },
+    "learned_weights": {
+     "open": 0.2470525187566988,
+     "await": 0.18316373728029603
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 9556,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2025-01-01",
+    "pipeline_wins": 418,
+    "pipeline": {
+     "open": 754,
+     "await": 9726,
+     "in_window": 683
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 457.4,
+      "error": 39.4,
+      "pct_error": 9.43,
+      "abs_pct_error": 9.43
+     },
+     "learned_stage": {
+      "forecast": 153.71,
+      "error": -264.29,
+      "pct_error": -63.23,
+      "abs_pct_error": 63.23
+     },
+     "time_in_stage": {
+      "forecast": 320.37,
+      "error": -97.63,
+      "pct_error": -23.36,
+      "abs_pct_error": 23.36
+     },
+     "run_rate": {
+      "forecast": 292.0,
+      "error": -126.0,
+      "pct_error": -30.14,
+      "abs_pct_error": 30.14
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 320.8,
+      "error": -97.2,
+      "pct_error": -23.25,
+      "abs_pct_error": 23.25
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 570.2,
+      "error": 152.2,
+      "pct_error": 36.41,
+      "abs_pct_error": 36.41
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 391.35,
+      "error": -26.65,
+      "pct_error": -6.38,
+      "abs_pct_error": 6.38
+     },
+     "run_rate": {
+      "forecast": 451.09,
+      "error": 33.09,
+      "pct_error": 7.92,
+      "abs_pct_error": 7.92
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 200,
+     "fixed": {
+      "forecast": 457.4,
+      "error": 257.4,
+      "pct_error": 128.7,
+      "abs_pct_error": 128.7
+     },
+     "learned_stage": {
+      "forecast": 153.71,
+      "error": -46.29,
+      "pct_error": -23.14,
+      "abs_pct_error": 23.14
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 200,
+     "later": 34,
+     "no_date": 0,
+     "past_due_start_given": 98,
+     "past_due_bid_close": 86,
+     "total": 418,
+     "past_due": 184,
+     "not_inside": 218,
+     "not_inside_pct": 52.2
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 31.9,
+     "await": 24.4
+    },
+    "learned_weights": {
+     "open": 0.24381828637147787,
+     "await": 0.1899810964083176
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 10480,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2025-04-01",
+    "pipeline_wins": 327,
+    "pipeline": {
+     "open": 608,
+     "await": 10504,
+     "in_window": 700
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 490.0,
+      "error": 163.0,
+      "pct_error": 49.85,
+      "abs_pct_error": 49.85
+     },
+     "learned_stage": {
+      "forecast": 164.5,
+      "error": -162.5,
+      "pct_error": -49.69,
+      "abs_pct_error": 49.69
+     },
+     "time_in_stage": {
+      "forecast": 302.54,
+      "error": -24.46,
+      "pct_error": -7.48,
+      "abs_pct_error": 7.48
+     },
+     "run_rate": {
+      "forecast": 295.0,
+      "error": -32.0,
+      "pct_error": -9.79,
+      "abs_pct_error": 9.79
+     }
+    },
+    "covered80": {
+     "fixed": false,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 350.0,
+      "error": 23.0,
+      "pct_error": 7.03,
+      "abs_pct_error": 7.03
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 595.0,
+      "error": 268.0,
+      "pct_error": 81.96,
+      "abs_pct_error": 81.96
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 377.83,
+      "error": 50.83,
+      "pct_error": 15.55,
+      "abs_pct_error": 15.55
+     },
+     "run_rate": {
+      "forecast": 464.19,
+      "error": 137.19,
+      "pct_error": 41.96,
+      "abs_pct_error": 41.96
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 179,
+     "fixed": {
+      "forecast": 490.0,
+      "error": 311.0,
+      "pct_error": 173.74,
+      "abs_pct_error": 173.74
+     },
+     "learned_stage": {
+      "forecast": 164.5,
+      "error": -14.5,
+      "pct_error": -8.1,
+      "abs_pct_error": 8.1
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 179,
+     "later": 8,
+     "no_date": 0,
+     "past_due_start_given": 62,
+     "past_due_bid_close": 78,
+     "total": 327,
+     "past_due": 140,
+     "not_inside": 148,
+     "not_inside_pct": 45.3
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 30.3,
+     "await": 20.9
+    },
+    "learned_weights": {
+     "open": 0.2587666263603386,
+     "await": 0.21124031007751937
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 11112,
+     "pct": 0.0,
+     "wins": 0
+    }
+   },
+   {
+    "snapshot": "2025-07-01",
+    "pipeline_wins": 426,
+    "pipeline": {
+     "open": 798,
+     "await": 11003,
+     "in_window": 675
+    },
+    "arms": {
+     "fixed": {
+      "forecast": 440.2,
+      "error": 14.2,
+      "pct_error": 3.33,
+      "abs_pct_error": 3.33
+     },
+     "learned_stage": {
+      "forecast": 169.16,
+      "error": -256.84,
+      "pct_error": -60.29,
+      "abs_pct_error": 60.29
+     },
+     "time_in_stage": {
+      "forecast": 319.66,
+      "error": -106.34,
+      "pct_error": -24.96,
+      "abs_pct_error": 24.96
+     },
+     "run_rate": {
+      "forecast": 246.0,
+      "error": -180.0,
+      "pct_error": -42.25,
+      "abs_pct_error": 42.25
+     }
+    },
+    "covered80": {
+     "fixed": true,
+     "learned_stage": false,
+     "time_in_stage": false
+    },
+    "fixed_range": [
+     {
+      "weights": {
+       "open_for_bids": 0.4,
+       "awaiting_award": 0.6
+      },
+      "forecast": 305.2,
+      "error": -120.8,
+      "pct_error": -28.36,
+      "abs_pct_error": 28.36
+     },
+     {
+      "weights": {
+       "open_for_bids": 0.8,
+       "awaiting_award": 0.9
+      },
+      "forecast": 557.6,
+      "error": 131.6,
+      "pct_error": 30.89,
+      "abs_pct_error": 30.89
+     }
+    ],
+    "corrected": {
+     "time_in_stage": {
+      "forecast": 391.95,
+      "error": -34.05,
+      "pct_error": -7.99,
+      "abs_pct_error": 7.99
+     },
+     "run_rate": {
+      "forecast": 386.43,
+      "error": -39.57,
+      "pct_error": -9.29,
+      "abs_pct_error": 9.29
+     }
+    },
+    "same_target": {
+     "wins_from_dated_deals": 217,
+     "fixed": {
+      "forecast": 440.2,
+      "error": 223.2,
+      "pct_error": 102.86,
+      "abs_pct_error": 102.86
+     },
+     "learned_stage": {
+      "forecast": 169.16,
+      "error": -47.84,
+      "pct_error": -22.05,
+      "abs_pct_error": 22.05
+     }
+    },
+    "where_wins_come_from": {
+     "inside": 217,
+     "later": 17,
+     "no_date": 0,
+     "past_due_start_given": 87,
+     "past_due_bid_close": 105,
+     "total": 426,
+     "past_due": 192,
+     "not_inside": 209,
+     "not_inside_pct": 49.1
+    },
+    "dated_in_quarter_won_pct": {
+     "open": 32.3,
+     "await": 31.8
+    },
+    "learned_weights": {
+     "open": 0.2619191309595655,
+     "await": 0.21853658536585366
+    },
+    "flagged": {
+     "deals": 0,
+     "of": 11801,
+     "pct": 0.0,
+     "wins": 0
+    }
+   }
+  ]
+ },
+ "head_to_head": {
+  "r2": {
+   "tis_corrected_closer_than_defaults": 4,
+   "tis_corrected_closer_than_run_rate_corrected": 4,
+   "of": 8
+  },
+  "v1": {
+   "tis_corrected_closer_than_defaults": 4,
+   "tis_corrected_closer_than_run_rate_corrected": 4,
+   "of": 8
+  }
+ },
+ "intervals_known_then": {
+  "r2": {
+   "fixed": {
+    "quarters": [
+     {
+      "snapshot": "2024-07-01",
+      "forecast": 426.8,
+      "lo80": 210.0,
+      "hi80": 306.4,
+      "actual": 350,
+      "covered": false
+     },
+     {
+      "snapshot": "2024-10-01",
+      "forecast": 424.2,
+      "lo80": 230.0,
+      "hi80": 308.3,
+      "actual": 407,
+      "covered": false
+     },
+     {
+      "snapshot": "2025-01-01",
+      "forecast": 445.4,
+      "lo80": 278.3,
+      "hi80": 331.0,
+      "actual": 413,
+      "covered": false
+     },
+     {
+      "snapshot": "2025-04-01",
+      "forecast": 490.8,
+      "lo80": 317.0,
+      "hi80": 399.5,
+      "actual": 323,
+      "covered": true
+     },
+     {
+      "snapshot": "2025-07-01",
+      "forecast": 441.0,
+      "lo80": 258.5,
+      "hi80": 365.6,
+      "actual": 421,
+      "covered": false
+     }
+    ],
+    "covered": 1,
+    "of": 5
+   },
+   "time_in_stage_corrected": {
+    "quarters": [
+     {
+      "snapshot": "2024-07-01",
+      "forecast": 323.79,
+      "lo80": 269.6,
+      "hi80": 421.7,
+      "actual": 350,
+      "covered": true
+     },
+     {
+      "snapshot": "2024-10-01",
+      "forecast": 334.38,
+      "lo80": 256.0,
+      "hi80": 434.5,
+      "actual": 407,
+      "covered": true
+     },
+     {
+      "snapshot": "2025-01-01",
+      "forecast": 390.41,
+      "lo80": 340.6,
+      "hi80": 511.0,
+      "actual": 413,
+      "covered": true
+     },
+     {
+      "snapshot": "2025-04-01",
+      "forecast": 374.07,
+      "lo80": 313.7,
+      "hi80": 514.3,
+      "actual": 323,
+      "covered": true
+     },
+     {
+      "snapshot": "2025-07-01",
+      "forecast": 391.2,
+      "lo80": 308.8,
+      "hi80": 536.5,
+      "actual": 421,
+      "covered": true
+     }
+    ],
+    "covered": 5,
+    "of": 5
+   }
+  },
+  "v1": {
+   "fixed": {
+    "quarters": [
+     {
+      "snapshot": "2024-07-01",
+      "forecast": 429.8,
+      "lo80": 208.5,
+      "hi80": 305.8,
+      "actual": 350,
+      "covered": false
+     },
+     {
+      "snapshot": "2024-10-01",
+      "forecast": 437.0,
+      "lo80": 234.9,
+      "hi80": 315.1,
+      "actual": 411,
+      "covered": false
+     },
+     {
+      "snapshot": "2025-01-01",
+      "forecast": 457.4,
+      "lo80": 283.3,
+      "hi80": 337.6,
+      "actual": 418,
+      "covered": false
+     },
+     {
+      "snapshot": "2025-04-01",
+      "forecast": 490.0,
+      "lo80": 312.3,
+      "hi80": 395.3,
+      "actual": 327,
+      "covered": true
+     },
+     {
+      "snapshot": "2025-07-01",
+      "forecast": 440.2,
+      "lo80": 257.2,
+      "hi80": 362.4,
+      "actual": 426,
+      "covered": false
+     }
+    ],
+    "covered": 1,
+    "of": 5
+   },
+   "time_in_stage_corrected": {
+    "quarters": [
+     {
+      "snapshot": "2024-07-01",
+      "forecast": 325.93,
+      "lo80": 268.8,
+      "hi80": 424.2,
+      "actual": 350,
+      "covered": true
+     },
+     {
+      "snapshot": "2024-10-01",
+      "forecast": 335.76,
+      "lo80": 255.3,
+      "hi80": 436.0,
+      "actual": 411,
+      "covered": true
+     },
+     {
+      "snapshot": "2025-01-01",
+      "forecast": 391.35,
+      "lo80": 341.1,
+      "hi80": 511.7,
+      "actual": 418,
+      "covered": true
+     },
+     {
+      "snapshot": "2025-04-01",
+      "forecast": 377.83,
+      "lo80": 317.3,
+      "hi80": 518.9,
+      "actual": 327,
+      "covered": true
+     },
+     {
+      "snapshot": "2025-07-01",
+      "forecast": 391.95,
+      "lo80": 310.3,
+      "hi80": 536.8,
+      "actual": 426,
+      "covered": true
+     }
+    ],
+    "covered": 5,
+    "of": 5
+   }
+  }
+ },
+ "main": {
+  "r2": {
+   "where_wins_come_from": {
+    "inside": 212,
+    "later": 14,
+    "no_date": 0,
+    "past_due_start_given": 85,
+    "past_due_bid_close": 110,
+    "total": 421,
+    "past_due": 195,
+    "not_inside": 209,
+    "not_inside_pct": 49.6
+   },
+   "dated_in_quarter_won_pct": {
+    "open": 31.6,
+    "await": 31.2
+   },
+   "learned_weights": {
+    "open": 0.26078680203045684,
+    "await": 0.21482889733840305
+   },
+   "flagged": {
+    "deals": 801,
+    "of": 11764,
+    "pct": 6.8,
+    "wins": 184
+   },
+   "pipeline_wins": 421
+  },
+  "v1": {
+   "where_wins_come_from": {
+    "inside": 217,
+    "later": 17,
+    "no_date": 0,
+    "past_due_start_given": 87,
+    "past_due_bid_close": 105,
+    "total": 426,
+    "past_due": 192,
+    "not_inside": 209,
+    "not_inside_pct": 49.1
+   },
+   "dated_in_quarter_won_pct": {
+    "open": 32.3,
+    "await": 31.8
+   },
+   "learned_weights": {
+    "open": 0.2619191309595655,
+    "await": 0.21853658536585366
+   },
+   "pipeline_wins": 426
+  }
+ },
+ "predictions": {
+  "R1": {
+   "held": true,
+   "observed": {
+    "fixed_mape_r2": 22.21,
+    "moved": -0.51,
+    "closest_on_average": "fixed"
+   }
+  },
+  "R2": {
+   "held": true,
+   "observed": {
+    "deals": 801,
+    "of": 11764,
+    "pct": 6.8,
+    "wins": 184
+   }
+  },
+  "R3": {
+   "held": true,
+   "observed": {
+    "fixed": 142.76,
+    "learned_stage": 23.46
+   }
+  },
+  "R4": {
+   "held": true,
+   "observed": {
+    "inside": 212,
+    "later": 14,
+    "no_date": 0,
+    "past_due_start_given": 85,
+    "past_due_bid_close": 110,
+    "total": 421,
+    "past_due": 195,
+    "not_inside": 209,
+    "not_inside_pct": 49.6
+   }
+  },
+  "R5": {
+   "held": false,
+   "observed": {
+    "covered": 5,
+    "of": 5
+   }
+  }
+ }
+}

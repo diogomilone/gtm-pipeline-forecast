@@ -1,0 +1,159 @@
+/* Generated from tokens.json 2.3.0. Edit the tokens, then regenerate. */
+@font-face {font-family: "Newsreader"; src: url("assets/fonts/newsreader-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap;}
+@font-face {font-family: "Newsreader"; src: url("assets/fonts/newsreader-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap;}
+@font-face {font-family: "Public Sans"; src: url("assets/fonts/public-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap;}
+@font-face {font-family: "Public Sans"; src: url("assets/fonts/public-sans-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap;}
+@font-face {font-family: "IBM Plex Mono"; src: url("assets/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap;}
+@font-face {font-family: "IBM Plex Mono"; src: url("assets/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap;}
+:root {
+  color-scheme: light;
+  --viz-background: #F6F4EE;
+  --viz-surface: #FFFFFF;
+  --viz-panel: #FFFFFF;
+  --viz-foreground: #10203A;
+  --viz-muted: #4E5A6B;
+  --viz-border: #6B788A;
+  --viz-rule: #D3D7DD;
+  --viz-rule-strong: #10203A;
+  --viz-grid: #E3E6EA;
+  --viz-track: #E6E8EC;
+  --viz-accent: #8F5A00;
+  --viz-link: #8F5A00;
+  --viz-focus: #8F5A00;
+  --viz-highlight: #8F5A00;
+  --viz-gain: #00574D;
+  --viz-loss: #BF4632;
+  --viz-bar: #6B788A;
+  --viz-categorical-1: #0072B2;
+  --viz-categorical-2: #D55E00;
+  --viz-categorical-3: #009E73;
+  --viz-categorical-4: #CC79A7;
+  --viz-categorical-5: #E69F00;
+  --viz-categorical-6: #56B4E9;
+  --viz-sequential-1: #E4EEF4;
+  --viz-sequential-2: #A9C9DC;
+  --viz-sequential-3: #6DA3C1;
+  --viz-sequential-4: #347DA5;
+  --viz-sequential-5: #00577E;
+  --viz-diverging-1: #BF4632;
+  --viz-diverging-2: #D07D6B;
+  --viz-diverging-3: #DCAFA2;
+  --viz-diverging-4: #E2E0DA;
+  --viz-diverging-5: #9DB1A8;
+  --viz-diverging-6: #598379;
+  --viz-diverging-7: #00574D;
+  --viz-font-heading: "Newsreader", Georgia, serif;
+  --viz-weight-heading: 500;
+  --viz-font-body: "Public Sans", system-ui, sans-serif;
+  --viz-weight-body: 400;
+  --viz-font-figures: "IBM Plex Mono", ui-monospace, monospace;
+  --viz-weight-figures: 500;
+  --viz-space-1: 4px;
+  --viz-space-2: 8px;
+  --viz-space-3: 12px;
+  --viz-space-4: 16px;
+  --viz-space-5: 24px;
+  --viz-space-6: 32px;
+  --viz-space-7: 48px;
+  --viz-space-8: 80px;
+  --viz-chart-margin-top: 24px;
+  --viz-chart-margin-right: 28px;
+  --viz-chart-margin-bottom: 42px;
+  --viz-chart-margin-left: 58px;
+  --viz-type-body: 17px;
+  --viz-type-small: 14px;
+  --viz-type-label: 13px;
+  --viz-type-title: 56px;
+  --viz-type-section: 28px;
+  --viz-type-kpi: 44px;
+  --viz-type-thumb-figure: 38px;
+  --viz-type-line-height: 1.6;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --viz-background: #0F1A2B;
+  --viz-surface: #142238;
+  --viz-panel: #182A44;
+  --viz-foreground: #EEF0EA;
+  --viz-muted: #A7B2C2;
+  --viz-border: #7F8DA3;
+  --viz-rule: #2B3C57;
+  --viz-rule-strong: #EEF0EA;
+  --viz-grid: #26364F;
+  --viz-track: #22344F;
+  --viz-accent: #F2B544;
+  --viz-link: #F2B544;
+  --viz-focus: #F2B544;
+  --viz-highlight: #F2B544;
+  --viz-gain: #5BCFBE;
+  --viz-loss: #DB7663;
+  --viz-bar: #7F8DA3;
+  --viz-categorical-1: #56B4E9;
+  --viz-categorical-2: #F2A356;
+  --viz-categorical-3: #55C9A3;
+  --viz-categorical-4: #E5A9CD;
+  --viz-categorical-5: #F0D56B;
+  --viz-categorical-6: #A4CEE4;
+  --viz-sequential-1: #21445B;
+  --viz-sequential-2: #306B8C;
+  --viz-sequential-3: #4F92B7;
+  --viz-sequential-4: #8DBED8;
+  --viz-sequential-5: #D6EAF4;
+  --viz-diverging-1: #DB7663;
+  --viz-diverging-2: #9F6461;
+  --viz-diverging-3: #65505B;
+  --viz-diverging-4: #2B3A52;
+  --viz-diverging-5: #3C6875;
+  --viz-diverging-6: #4C9A99;
+  --viz-diverging-7: #5BCFBE;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  color-scheme: dark;
+  --viz-background: #0F1A2B;
+  --viz-surface: #142238;
+  --viz-panel: #182A44;
+  --viz-foreground: #EEF0EA;
+  --viz-muted: #A7B2C2;
+  --viz-border: #7F8DA3;
+  --viz-rule: #2B3C57;
+  --viz-rule-strong: #EEF0EA;
+  --viz-grid: #26364F;
+  --viz-track: #22344F;
+  --viz-accent: #F2B544;
+  --viz-link: #F2B544;
+  --viz-focus: #F2B544;
+  --viz-highlight: #F2B544;
+  --viz-gain: #5BCFBE;
+  --viz-loss: #DB7663;
+  --viz-bar: #7F8DA3;
+  --viz-categorical-1: #56B4E9;
+  --viz-categorical-2: #F2A356;
+  --viz-categorical-3: #55C9A3;
+  --viz-categorical-4: #E5A9CD;
+  --viz-categorical-5: #F0D56B;
+  --viz-categorical-6: #A4CEE4;
+  --viz-sequential-1: #21445B;
+  --viz-sequential-2: #306B8C;
+  --viz-sequential-3: #4F92B7;
+  --viz-sequential-4: #8DBED8;
+  --viz-sequential-5: #D6EAF4;
+  --viz-diverging-1: #DB7663;
+  --viz-diverging-2: #9F6461;
+  --viz-diverging-3: #65505B;
+  --viz-diverging-4: #2B3A52;
+  --viz-diverging-5: #3C6875;
+  --viz-diverging-6: #4C9A99;
+  --viz-diverging-7: #5BCFBE;
+}}
+body {background: var(--viz-background); color: var(--viz-foreground); font-family: var(--viz-font-body); font-weight: var(--viz-weight-body); font-size: var(--viz-type-body); line-height: var(--viz-type-line-height);}
+h1, h2, h3 {font-family: var(--viz-font-heading); font-weight: var(--viz-weight-heading); font-optical-sizing: auto;}
+a {color: var(--viz-link); text-underline-offset: .18em;}
+button, select, input {font: inherit;}
+:focus-visible {outline: 3px solid var(--viz-focus); outline-offset: 3px;}
+.num {font-family: var(--viz-font-figures); font-variant-numeric: tabular-nums lining-nums;}
+.viz-banner {border-inline-start: 4px solid var(--viz-rule-strong); padding: var(--viz-space-3) var(--viz-space-4); background: var(--viz-surface);}
+.viz-caption {font-size: var(--viz-type-body); font-weight: 600;}
+.viz-source {color: var(--viz-muted); font-size: var(--viz-type-small);}
+.viz-table-toggle summary {cursor: pointer; color: var(--viz-link); padding-block: var(--viz-space-3);}
+.viz-annotation {font-family: var(--viz-font-body); font-size: var(--viz-type-small); fill: var(--viz-foreground);}
+@media (prefers-reduced-motion: reduce) {html {scroll-behavior: auto;} .viz-animated {animation-duration: 0s; transition-duration: 0s;}}

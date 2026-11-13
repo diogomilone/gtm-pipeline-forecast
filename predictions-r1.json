@@ -1,0 +1,15 @@
+{
+ "note": "Declared before any forecast was computed or scored, after a profile of the source files (counts, overall match rate near 40%, lag spreads, missing amounts).",
+ "expected_finding": "The CRM default weights over-forecast the quarter by a wide margin, because far fewer than 60 to 80% of open tenders end in an award; weights learned from history remove most of that error; time in stage adds a further gain because stale deals stop counting.",
+ "opposite_finding": "The default weights land within 15% of what closed, or learned weights do no better than the defaults over the backtest, so the stage arithmetic is not where the error lives.",
+ "predictions": [
+  {"id": "P1", "text": "Fixed default weights (60/80) over-forecast the main quarter (snapshot 2025-07-01) by more than 40%."},
+  {"id": "P2", "text": "Learned stage weights cut the main quarter's absolute error to less than half of the fixed weights' absolute error."},
+  {"id": "P3", "text": "Over the 8 backtest quarters, time in stage has a lower MAPE than learned stage weights."},
+  {"id": "P4", "text": "Over the 8 backtest quarters, the point-in-time learned arms (learned stage and time in stage) are biased low: mean signed percentage error below zero for both."},
+  {"id": "P5", "text": "The leakage contrast flatters time in stage: its MAPE with every award known is at least 5 points lower than point in time."},
+  {"id": "P6", "text": "Over the 8 backtest quarters, the median share of a quarter's awards that come from opportunities created after the quarter began is at least 30%."},
+  {"id": "P7", "text": "Time in stage beats the run-rate baseline on MAPE over the 8 backtest quarters."},
+  {"id": "P8", "text": "Time in stage's 80% interval covers the actual count in at most 4 of the 8 backtest quarters (too narrow, because rates drift)."}
+ ]
+}

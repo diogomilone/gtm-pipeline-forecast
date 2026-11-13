@@ -1,0 +1,200 @@
+/* Page kit, release 2.0.0 with the 2.0.1, 2.0.3 and 2.0.4 patches, the 2.1.0 changes and the 2.1.1 patch. Load after tokens.css. Every colour comes from a token.
+   Contracts: header.site, section.hero (table.kpis, p.limitation), aside.sim-banner,
+   figure.chart, section.method, footer.site, the theme toggle and the thumbnail card.
+   Optional hooks (2.0.4): .kit-rule (section rule in the content column), details.kit-disclosure (marked summary).
+   2.1.0: display figures (.kpi-figure, .thumb-figure) use the text face with tabular lining figures;
+   .table-scroll draws an edge shade only while its table overflows, and --kit-scroll-ground names the ground it sits on.
+   2.1.1: figure.chart and section.hero lay out one shrinkable grid column (minmax(0, 1fr)), so an opened wide table
+   scrolls inside its .table-scroll instead of widening the figure or the hero and the page. */
+
+:root {--kit-max: 1240px; --kit-gutter: 16px;}
+@media (min-width: 760px) {:root {--kit-gutter: 32px;}}
+*, *::before, *::after {box-sizing: border-box;}
+html {-webkit-text-size-adjust: 100%;}
+body {margin: 0; overflow-wrap: break-word;}
+.kit-wrap {width: 100%; max-width: var(--kit-max); margin-inline: auto; padding-inline: var(--kit-gutter);}
+.visually-hidden {position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;}
+.kit-skip {position: absolute; left: 1rem; top: -6rem; z-index: 10; padding: .75rem 1rem; background: var(--viz-surface); color: var(--viz-link);}
+.kit-skip:focus {top: 1rem;}
+a {text-decoration-thickness: 1px; text-underline-offset: .2em;}
+a:hover {text-decoration-thickness: 2px;}
+
+/* Display figures (2.1.0): KPI tiles, card figures and hero numbers use the text face with tabular lining
+   figures, so a figure such as 38,000 reads as one word. The minus sign is U+2212 from kit/numfmt. */
+.kpi-figure, .thumb-figure {font-family: var(--viz-font-body); font-variant-numeric: tabular-nums lining-nums;}
+/* Table and code-like figures keep the mono figure font (table numerals, chart value labels). */
+td.num, th.num, .chart-value, svg .value {font-family: var(--viz-font-figures); font-variant-numeric: tabular-nums lining-nums;}
+
+/* Signed changes only: teal for a gain, coral for a loss. Headline and KPI figures stay ink. */
+.text-gain {color: var(--viz-gain);}
+.text-loss {color: var(--viz-loss);}
+svg .text-gain {fill: var(--viz-gain);}
+svg .text-loss {fill: var(--viz-loss);}
+
+/* header.site */
+header.site {border-bottom: 1px solid var(--viz-rule);}
+header.site .site-row {display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .25rem 2rem; padding-block: .75rem; min-height: 64px;}
+header.site .site-id {display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .9rem; margin: 0;}
+header.site .site-name {font-family: var(--viz-font-heading); font-optical-sizing: auto; font-size: 1.35rem; font-weight: 600; letter-spacing: -.01em; color: var(--viz-foreground); text-decoration: none;}
+header.site .site-role {font-size: var(--viz-type-small); color: var(--viz-muted);}
+header.site nav {display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.25rem;}
+header.site nav a {display: inline-flex; align-items: center; min-height: 44px; color: var(--viz-foreground); text-decoration: none;}
+header.site nav a:hover {color: var(--viz-link); text-decoration: underline;}
+.theme-toggle {font: inherit; font-size: var(--viz-type-small); color: var(--viz-foreground); background: transparent; border: 1px solid var(--viz-border); border-radius: 6px; padding: .35rem .8rem; min-height: 44px; cursor: pointer;}
+.theme-toggle:hover {border-color: var(--viz-foreground);}
+/* Phone: one row (name, four links, icon-sized theme control), about 65 px tall from 360 px up.
+   Every control is 44 px tall; the role line shows from 760 px up; the toggle keeps its
+   text as its accessible name ("Theme: auto") while only the half-filled disc is drawn.
+   The name never shrinks below its text (flex-shrink 0) and keeps an 8 px gap to the first link;
+   the nav bleeds 12 px into the right gutter, where the toggle's own 13 px of empty box sits,
+   so the row fits at 360 px. Below 360 px there is no room for one row: the nav wraps under the name.
+   Adjacent links read as separate items (2.0.4): each link keeps 5 px of side padding (6 px from
+   390 px) and a 1 px divider sits on the boundary between two links, so link texts are 10 px or
+   more apart with a divider between them. Under 390 px the short links (CV, Email) are narrower than
+   44 px but at least 24 px wide (WCAG 2.2 target size, minimum); from 390 px every link is 44 px wide
+   or more, and the toggle is 44 by 44 px at every width. */
+@media (max-width: 759px) {
+  header.site .site-row {flex-wrap: nowrap; padding-block: .25rem; gap: 0 .5rem; min-height: 64px;}
+  header.site .site-id {flex: 0 0 auto;}
+  header.site .site-name {font-size: .9375rem; white-space: nowrap;}
+  header.site .site-role {display: none;}
+  header.site nav {flex-wrap: nowrap; flex: 0 0 auto; gap: 0; margin-right: -12px;}
+  header.site nav a {position: relative; min-width: 24px; justify-content: center; padding-inline: 5px; font-size: .75rem;}
+  header.site nav a + a::before {content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: 14px; margin-top: -7px; background: var(--viz-border);}
+  header.site .theme-toggle {width: 44px; padding: 0; font-size: 0; display: inline-flex; align-items: center; justify-content: center;}
+  header.site .theme-toggle::before {content: ""; width: 18px; height: 18px; border: 2px solid currentColor; border-radius: 50%; background: linear-gradient(90deg, currentColor 50%, transparent 50%);}
+}
+@media (min-width: 390px) and (max-width: 759px) {
+  header.site nav a {min-width: 44px; padding-inline: 6px;}
+}
+@media (max-width: 359px) {
+  header.site .site-row {flex-wrap: wrap; padding-block: .25rem 0;}
+  header.site nav {margin-right: 0; margin-left: -12px;}
+}
+
+/* section.hero */
+section.hero {display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; padding-block: 2.25rem 1.5rem;}
+section.hero .hero-tags {display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; font-size: var(--viz-type-label);}
+.tag {display: inline-block; padding: .05rem .45rem; border: 1px solid var(--viz-rule-strong); border-radius: 4px; color: var(--viz-foreground); line-height: 1.5;}
+.tag.tag-data {border-color: var(--viz-border); color: var(--viz-muted);}
+section.hero .hero-piece {margin: 0; font-family: var(--viz-font-heading); font-optical-sizing: auto; font-size: 1.1rem; font-weight: 500; color: var(--viz-muted);}
+section.hero h1 {margin: 0; font-size: clamp(2.1rem, 4.4vw, 3.5rem); font-weight: 500; line-height: 1.06; letter-spacing: -.02em; max-width: 24ch;}
+section.hero .hero-dek {margin: 0; font-size: 1.125rem; max-width: 46rem; color: var(--viz-foreground);}
+
+/* table.kpis: ruled, up to four cells (label, figure, context line); the limitation is the last row. */
+table.kpis {width: 100%; border-collapse: collapse; margin-top: .5rem; border-top: 2px solid var(--viz-rule-strong); background: var(--viz-surface);}
+table.kpis td {vertical-align: top; padding: .9rem 1rem 1rem; border-bottom: 1px solid var(--viz-rule); text-align: left;}
+table.kpis tbody td + td {border-left: 1px solid var(--viz-rule);}
+table.kpis .kpi-label, table.kpis .kpi-figure, table.kpis .kpi-context {display: block;}
+table.kpis .kpi-label {font-size: var(--viz-type-label); color: var(--viz-muted);}
+table.kpis .kpi-figure {font-size: clamp(1.9rem, 3.4vw, var(--viz-type-kpi)); font-weight: 600; line-height: 1.1; letter-spacing: -.02em; color: var(--viz-foreground); margin-block: .2rem .15rem;}
+table.kpis .kpi-context {font-size: var(--viz-type-label); color: var(--viz-muted);}
+table.kpis tfoot td {border-bottom: 1px solid var(--viz-rule-strong); padding-block: .75rem;}
+p.limitation {margin: 0; max-width: 60rem;}
+p.limitation strong {font-weight: 600; margin-right: .4rem;}
+@media (max-width: 759px) {
+  table.kpis, table.kpis tbody, table.kpis tfoot {display: block;}
+  table.kpis tbody tr {display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));}
+  table.kpis tfoot tr, table.kpis tfoot td {display: block;}
+  table.kpis td {display: block; padding: .75rem .75rem .85rem 0;}
+  table.kpis tbody td + td {border-left: 0;}
+  table.kpis tbody td:nth-child(even) {padding-left: .75rem; border-left: 1px solid var(--viz-rule);}
+}
+
+/* aside.sim-banner: one visible line, never inside a disclosure. */
+aside.sim-banner {margin-block: 1rem; padding: .6rem 1rem; border-inline-start: 4px solid var(--viz-rule-strong); background: var(--viz-surface);}
+aside.sim-banner p {margin: 0; font-size: var(--viz-type-small);}
+
+/* figure.chart: takeaway caption as the title, the chart, "Show the data", source. */
+/* 2.1.1: one shrinkable column. An auto-sized column grew to the widest child's min-content width, so an opened
+   "Show the data" table widened the whole figure and the page scrolled sideways on a phone. */
+figure.chart {margin: 0; padding: 1rem; background: var(--viz-surface); border: 1px solid var(--viz-rule); border-radius: 6px; min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: .6rem; align-content: start;}
+figure.chart > figcaption {font-family: var(--viz-font-heading); font-optical-sizing: auto; font-size: 1.25rem; font-weight: 600; line-height: 1.25;}
+figure.chart .chart-unit {margin: 0; font-size: var(--viz-type-small); color: var(--viz-muted);}
+figure.chart .chart-plot svg {display: block; width: 100%; height: auto; max-width: 560px; overflow: visible;}
+figure.chart details.chart-data summary {cursor: pointer; color: var(--viz-link); min-height: 44px; display: flex; align-items: center;}
+figure.chart .chart-source {margin: 0; font-size: var(--viz-type-small); color: var(--viz-muted);}
+/* Table scroll cue (2.1.0). A wide table scrolls inside .table-scroll (give the wrapper tabindex="0", role="region"
+   and an aria-label so a keyboard can scroll it). Two shades in --viz-border sit at the wrapper's edges
+   (background-attachment: scroll); two covers in the ground colour travel with the content (local) and hide each
+   shade while that edge of the table is in view. A table that fits shows no shade; no script is involved.
+   --kit-scroll-ground must match the ground behind the wrapper: --viz-background by default, --viz-surface inside
+   figure.chart, table.kpis and .thumb. Forced colours keep the cue in system colours. */
+.table-scroll {
+  --kit-scroll-ground: var(--viz-background);
+  --kit-scroll-shade: var(--viz-border);
+  overflow-x: auto;
+  background-color: var(--kit-scroll-ground);
+  background-image: linear-gradient(to right, var(--kit-scroll-ground) 40%, transparent), linear-gradient(to left, var(--kit-scroll-ground) 40%, transparent),
+                    linear-gradient(to right, var(--kit-scroll-shade), transparent), linear-gradient(to left, var(--kit-scroll-shade), transparent);
+  background-position: left center, right center, left center, right center;
+  background-size: 2.5rem 100%, 2.5rem 100%, .75rem 100%, .75rem 100%;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+}
+figure.chart .table-scroll, table.kpis .table-scroll, .thumb .table-scroll {--kit-scroll-ground: var(--viz-surface);}
+.table-scroll:focus-visible {outline: 3px solid var(--viz-focus); outline-offset: 3px;}
+@media (forced-colors: active) {
+  .table-scroll, figure.chart .table-scroll, table.kpis .table-scroll, .thumb .table-scroll {forced-color-adjust: none; --kit-scroll-ground: Canvas; --kit-scroll-shade: CanvasText;}
+  .table-scroll > * {forced-color-adjust: auto;}
+  .table-scroll:focus-visible {outline-color: Highlight;}
+}
+table.data {border-collapse: collapse; width: 100%; font-size: var(--viz-type-small); text-align: left;}
+table.data caption {text-align: left; color: var(--viz-muted); padding: .5rem 0;}
+table.data th, table.data td {border-bottom: 1px solid var(--viz-rule); padding: .45rem .75rem .45rem 0;}
+table.data thead th {border-bottom: 1px solid var(--viz-rule-strong);}
+table.data td.num, table.data th.num {text-align: right;}
+@media (min-width: 760px) {figure.chart {padding: 1.25rem 1.5rem;}}
+
+/* section.method: seeds, run labels, reconciliation and reference tables.
+   2.0.4: the section rule is drawn by ::before inside the content box, so it spans the content column
+   whether the section sits inside a .kit-wrap or is the wrapper itself (a border on a padded wrapper
+   runs into the gutter). Keep section.method a block box. .kit-rule draws the same rule on any block. */
+section.method {margin-block: 2.5rem; padding-top: 0; border-top: 0;}
+section.method::before, .kit-rule::before {content: ""; display: block; padding-top: .75rem; border-top: 2px solid var(--viz-rule-strong);}
+section.method h2 {margin: 0 0 .75rem; font-size: var(--viz-type-section); font-weight: 500; line-height: 1.15;}
+section.method details {border-bottom: 1px solid var(--viz-rule);}
+section.method summary {cursor: pointer; min-height: 44px; display: flex; align-items: center; font-weight: 600;}
+
+/* Disclosure marker (2.0.4). A summary laid out as a flex row loses the browser's triangle, so the kit
+   draws a chevron in the summary's text colour: pointing right when closed, down when open. Applies to
+   the kit's own disclosures ("Show the data", method blocks) and to any details.kit-disclosure. */
+details.kit-disclosure > summary {cursor: pointer; min-height: 44px; display: flex; align-items: center;}
+figure.chart details.chart-data > summary, section.method details > summary, details.kit-disclosure > summary {list-style: none;}
+figure.chart details.chart-data > summary::-webkit-details-marker, section.method details > summary::-webkit-details-marker, details.kit-disclosure > summary::-webkit-details-marker {display: none;}
+figure.chart details.chart-data > summary::before, section.method details > summary::before, details.kit-disclosure > summary::before {content: ""; display: inline-block; flex: none; width: .5em; height: .5em; margin: 0 .7em 0 .15em; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateX(-.1em) rotate(-45deg);}
+figure.chart details.chart-data[open] > summary::before, section.method details[open] > summary::before, details.kit-disclosure[open] > summary::before {transform: translateY(-.15em) rotate(45deg);}
+
+/* footer.site */
+footer.site {margin-top: 3rem; border-top: 1px solid var(--viz-rule); padding-block: 1.25rem 2rem; font-size: var(--viz-type-small); color: var(--viz-muted);}
+footer.site p {margin: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; align-items: center;}
+footer.site a {min-height: 44px; display: inline-flex; align-items: center;}
+
+/* Thumbnail card: headline figure in the text face with tabular figures (2.1.0), a short caption, one glyph. No text below 12px. */
+.thumb {background: var(--viz-panel); border: 1px solid var(--viz-rule); border-radius: 6px; padding: 1rem 1.1rem 1.1rem; display: flex; flex-direction: column; gap: .5rem; min-height: 15rem; min-width: 0;}
+.thumb-head {display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .45rem;}
+.thumb-figure {font-size: var(--viz-type-thumb-figure); font-weight: 600; line-height: 1; letter-spacing: -.02em; color: var(--viz-foreground);}
+.thumb-unit {font-size: var(--viz-type-small); color: var(--viz-muted);}
+.thumb-caption {margin: 0; font-size: var(--viz-type-label); line-height: 1.35; color: var(--viz-muted);}
+.thumb-glyph {margin-top: auto;}
+.thumb-glyph svg {display: block; width: 100%; height: auto; max-height: 6.5rem;}
+.glyph .g-bar {fill: var(--viz-bar);}
+.glyph .g-track {fill: var(--viz-track);}
+.glyph .g-highlight {fill: var(--viz-highlight);}
+.glyph .g-gain {fill: var(--viz-gain);}
+.glyph .g-loss {fill: var(--viz-loss);}
+.glyph .g-zero {stroke: var(--viz-rule-strong); stroke-width: 2;}
+.glyph .g-line {fill: none; stroke: var(--viz-bar); stroke-width: 1.5;}
+.glyph .g-node {fill: var(--viz-panel); stroke: var(--viz-foreground); stroke-width: 1.5;}
+.glyph .g-root {fill: var(--viz-highlight); stroke: var(--viz-highlight); stroke-width: 1.5;}
+.glyph .g-cell {fill: var(--viz-track); stroke: var(--viz-bar); stroke-width: 1;}
+.glyph .g-cell.g-marked {fill: var(--viz-highlight); stroke: var(--viz-highlight);}
+
+@media (prefers-reduced-motion: reduce) {*, *::before, *::after {animation-duration: 0s !important; transition-duration: 0s !important; scroll-behavior: auto !important;}}
+@media print {
+  :root, :root[data-theme="dark"] {color-scheme: light; --viz-background: Canvas; --viz-surface: Canvas; --viz-panel: Canvas; --viz-foreground: CanvasText; --viz-muted: CanvasText; --viz-rule: GrayText; --viz-rule-strong: CanvasText; --viz-link: LinkText;}
+  .theme-toggle, .kit-skip {display: none;}
+  header.site nav a + a::before {content: none;}
+  figure.chart, table.kpis {break-inside: avoid;}
+  details > * {display: block;}
+}

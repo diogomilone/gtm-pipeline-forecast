@@ -1,0 +1,31 @@
+{
+ "note": "Declared assumptions, not data. Every figure that uses them says so on the page.",
+ "capacity": {
+  "onboarding_hours_per_start": {
+   "base": 40,
+   "range": [
+    20,
+    40,
+    80
+   ],
+   "what": "hours of a delivery or onboarding team per contract that starts"
+  },
+  "hours_per_person_quarter": 450,
+  "person_quarter_cost_cad": {
+   "base": 35000,
+   "what": "loaded cost of one onboarding person for one quarter"
+  }
+ },
+ "money": {
+  "value_of_one_win": "the median award amount of wins with a usable amount, from the data",
+  "bid_cost_cad": {
+   "base": 5000,
+   "range": [
+    2000,
+    5000,
+    15000
+   ],
+   "what": "a supplier's cost to prepare one bid"
+  }
+ }
+}

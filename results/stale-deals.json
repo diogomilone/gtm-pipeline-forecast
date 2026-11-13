@@ -1,0 +1,589 @@
+{
+ "what": "deals dated outside the quarter, by stage and days at that stage, at each quarter start",
+ "bands": [
+  "0-14",
+  "15-30",
+  "31-60",
+  "61-120",
+  "121-365",
+  "366+"
+ ],
+ "quarters": [
+  {
+   "snapshot": "2023-10-01",
+   "deals": 5213,
+   "won_in_quarter": 198,
+   "await_over_a_year": {
+    "deals": 441,
+    "won_in_quarter": 0,
+    "ever_won": 2
+   },
+   "groups": {
+    "await:0-14": {
+     "deals": 144,
+     "won_in_quarter": 47,
+     "ever_won": 50
+    },
+    "await:121-365": {
+     "deals": 3113,
+     "won_in_quarter": 11,
+     "ever_won": 19
+    },
+    "await:15-30": {
+     "deals": 198,
+     "won_in_quarter": 50,
+     "ever_won": 61
+    },
+    "await:31-60": {
+     "deals": 371,
+     "won_in_quarter": 48,
+     "ever_won": 55
+    },
+    "await:366+": {
+     "deals": 441,
+     "won_in_quarter": 0,
+     "ever_won": 2
+    },
+    "await:61-120": {
+     "deals": 659,
+     "won_in_quarter": 23,
+     "ever_won": 35
+    },
+    "open:0-14": {
+     "deals": 34,
+     "won_in_quarter": 3,
+     "ever_won": 12
+    },
+    "open:121-365": {
+     "deals": 106,
+     "won_in_quarter": 4,
+     "ever_won": 16
+    },
+    "open:15-30": {
+     "deals": 41,
+     "won_in_quarter": 4,
+     "ever_won": 10
+    },
+    "open:31-60": {
+     "deals": 61,
+     "won_in_quarter": 6,
+     "ever_won": 16
+    },
+    "open:366+": {
+     "deals": 6,
+     "won_in_quarter": 0,
+     "ever_won": 1
+    },
+    "open:61-120": {
+     "deals": 39,
+     "won_in_quarter": 2,
+     "ever_won": 8
+    }
+   }
+  },
+  {
+   "snapshot": "2024-01-01",
+   "deals": 6425,
+   "won_in_quarter": 225,
+   "await_over_a_year": {
+    "deals": 1544,
+    "won_in_quarter": 1,
+    "ever_won": 2
+   },
+   "groups": {
+    "await:0-14": {
+     "deals": 125,
+     "won_in_quarter": 39,
+     "ever_won": 44
+    },
+    "await:121-365": {
+     "deals": 2937,
+     "won_in_quarter": 16,
+     "ever_won": 28
+    },
+    "await:15-30": {
+     "deals": 202,
+     "won_in_quarter": 49,
+     "ever_won": 54
+    },
+    "await:31-60": {
+     "deals": 475,
+     "won_in_quarter": 46,
+     "ever_won": 58
+    },
+    "await:366+": {
+     "deals": 1544,
+     "won_in_quarter": 1,
+     "ever_won": 2
+    },
+    "await:61-120": {
+     "deals": 811,
+     "won_in_quarter": 39,
+     "ever_won": 51
+    },
+    "open:0-14": {
+     "deals": 36,
+     "won_in_quarter": 7,
+     "ever_won": 12
+    },
+    "open:121-365": {
+     "deals": 99,
+     "won_in_quarter": 3,
+     "ever_won": 17
+    },
+    "open:15-30": {
+     "deals": 55,
+     "won_in_quarter": 12,
+     "ever_won": 20
+    },
+    "open:31-60": {
+     "deals": 66,
+     "won_in_quarter": 9,
+     "ever_won": 17
+    },
+    "open:366+": {
+     "deals": 47,
+     "won_in_quarter": 0,
+     "ever_won": 2
+    },
+    "open:61-120": {
+     "deals": 28,
+     "won_in_quarter": 4,
+     "ever_won": 8
+    }
+   }
+  },
+  {
+   "snapshot": "2024-04-01",
+   "deals": 7270,
+   "won_in_quarter": 160,
+   "await_over_a_year": {
+    "deals": 2751,
+    "won_in_quarter": 0,
+    "ever_won": 2
+   },
+   "groups": {
+    "await:0-14": {
+     "deals": 119,
+     "won_in_quarter": 27,
+     "ever_won": 32
+    },
+    "await:121-365": {
+     "deals": 2800,
+     "won_in_quarter": 24,
+     "ever_won": 39
+    },
+    "await:15-30": {
+     "deals": 160,
+     "won_in_quarter": 20,
+     "ever_won": 28
+    },
+    "await:31-60": {
+     "deals": 392,
+     "won_in_quarter": 42,
+     "ever_won": 51
+    },
+    "await:366+": {
+     "deals": 2751,
+     "won_in_quarter": 0,
+     "ever_won": 2
+    },
+    "await:61-120": {
+     "deals": 775,
+     "won_in_quarter": 30,
+     "ever_won": 41
+    },
+    "open:0-14": {
+     "deals": 29,
+     "won_in_quarter": 3,
+     "ever_won": 10
+    },
+    "open:121-365": {
+     "deals": 85,
+     "won_in_quarter": 1,
+     "ever_won": 15
+    },
+    "open:15-30": {
+     "deals": 21,
+     "won_in_quarter": 2,
+     "ever_won": 7
+    },
+    "open:31-60": {
+     "deals": 41,
+     "won_in_quarter": 8,
+     "ever_won": 18
+    },
+    "open:366+": {
+     "deals": 62,
+     "won_in_quarter": 0,
+     "ever_won": 4
+    },
+    "open:61-120": {
+     "deals": 35,
+     "won_in_quarter": 3,
+     "ever_won": 9
+    }
+   }
+  },
+  {
+   "snapshot": "2024-07-01",
+   "deals": 8068,
+   "won_in_quarter": 161,
+   "await_over_a_year": {
+    "deals": 3672,
+    "won_in_quarter": 1,
+    "ever_won": 4
+   },
+   "groups": {
+    "await:0-14": {
+     "deals": 115,
+     "won_in_quarter": 28,
+     "ever_won": 39
+    },
+    "await:121-365": {
+     "deals": 2951,
+     "won_in_quarter": 20,
+     "ever_won": 33
+    },
+    "await:15-30": {
+     "deals": 132,
+     "won_in_quarter": 28,
+     "ever_won": 31
+    },
+    "await:31-60": {
+     "deals": 303,
+     "won_in_quarter": 40,
+     "ever_won": 44
+    },
+    "await:366+": {
+     "deals": 3672,
+     "won_in_quarter": 1,
+     "ever_won": 4
+    },
+    "await:61-120": {
+     "deals": 592,
+     "won_in_quarter": 32,
+     "ever_won": 43
+    },
+    "open:0-14": {
+     "deals": 32,
+     "won_in_quarter": 2,
+     "ever_won": 14
+    },
+    "open:121-365": {
+     "deals": 91,
+     "won_in_quarter": 1,
+     "ever_won": 22
+    },
+    "open:15-30": {
+     "deals": 30,
+     "won_in_quarter": 6,
+     "ever_won": 10
+    },
+    "open:31-60": {
+     "deals": 35,
+     "won_in_quarter": 1,
+     "ever_won": 10
+    },
+    "open:366+": {
+     "deals": 79,
+     "won_in_quarter": 0,
+     "ever_won": 5
+    },
+    "open:61-120": {
+     "deals": 36,
+     "won_in_quarter": 2,
+     "ever_won": 7
+    }
+   }
+  },
+  {
+   "snapshot": "2024-10-01",
+   "deals": 8902,
+   "won_in_quarter": 223,
+   "await_over_a_year": {
+    "deals": 4576,
+    "won_in_quarter": 3,
+    "ever_won": 5
+   },
+   "groups": {
+    "await:0-14": {
+     "deals": 101,
+     "won_in_quarter": 36,
+     "ever_won": 38
+    },
+    "await:121-365": {
+     "deals": 2792,
+     "won_in_quarter": 17,
+     "ever_won": 25
+    },
+    "await:15-30": {
+     "deals": 171,
+     "won_in_quarter": 47,
+     "ever_won": 58
+    },
+    "await:31-60": {
+     "deals": 361,
+     "won_in_quarter": 58,
+     "ever_won": 67
+    },
+    "await:366+": {
+     "deals": 4576,
+     "won_in_quarter": 3,
+     "ever_won": 5
+    },
+    "await:61-120": {
+     "deals": 624,
+     "won_in_quarter": 42,
+     "ever_won": 48
+    },
+    "open:0-14": {
+     "deals": 26,
+     "won_in_quarter": 5,
+     "ever_won": 11
+    },
+    "open:121-365": {
+     "deals": 67,
+     "won_in_quarter": 7,
+     "ever_won": 13
+    },
+    "open:15-30": {
+     "deals": 19,
+     "won_in_quarter": 1,
+     "ever_won": 3
+    },
+    "open:31-60": {
+     "deals": 32,
+     "won_in_quarter": 5,
+     "ever_won": 11
+    },
+    "open:366+": {
+     "deals": 95,
+     "won_in_quarter": 0,
+     "ever_won": 12
+    },
+    "open:61-120": {
+     "deals": 38,
+     "won_in_quarter": 2,
+     "ever_won": 13
+    }
+   }
+  },
+  {
+   "snapshot": "2025-01-01",
+   "deals": 9797,
+   "won_in_quarter": 218,
+   "await_over_a_year": {
+    "deals": 5679,
+    "won_in_quarter": 1,
+    "ever_won": 5
+   },
+   "groups": {
+    "await:0-14": {
+     "deals": 104,
+     "won_in_quarter": 33,
+     "ever_won": 37
+    },
+    "await:121-365": {
+     "deals": 2457,
+     "won_in_quarter": 16,
+     "ever_won": 23
+    },
+    "await:15-30": {
+     "deals": 243,
+     "won_in_quarter": 55,
+     "ever_won": 68
+    },
+    "await:31-60": {
+     "deals": 366,
+     "won_in_quarter": 46,
+     "ever_won": 56
+    },
+    "await:366+": {
+     "deals": 5679,
+     "won_in_quarter": 1,
+     "ever_won": 5
+    },
+    "await:61-120": {
+     "deals": 639,
+     "won_in_quarter": 39,
+     "ever_won": 51
+    },
+    "open:0-14": {
+     "deals": 28,
+     "won_in_quarter": 4,
+     "ever_won": 12
+    },
+    "open:121-365": {
+     "deals": 55,
+     "won_in_quarter": 2,
+     "ever_won": 12
+    },
+    "open:15-30": {
+     "deals": 53,
+     "won_in_quarter": 12,
+     "ever_won": 19
+    },
+    "open:31-60": {
+     "deals": 37,
+     "won_in_quarter": 9,
+     "ever_won": 15
+    },
+    "open:366+": {
+     "deals": 99,
+     "won_in_quarter": 1,
+     "ever_won": 13
+    },
+    "open:61-120": {
+     "deals": 37,
+     "won_in_quarter": 0,
+     "ever_won": 6
+    }
+   }
+  },
+  {
+   "snapshot": "2025-04-01",
+   "deals": 10412,
+   "won_in_quarter": 148,
+   "await_over_a_year": {
+    "deals": 6644,
+    "won_in_quarter": 1,
+    "ever_won": 5
+   },
+   "groups": {
+    "await:0-14": {
+     "deals": 121,
+     "won_in_quarter": 24,
+     "ever_won": 33
+    },
+    "await:121-365": {
+     "deals": 2233,
+     "won_in_quarter": 19,
+     "ever_won": 27
+    },
+    "await:15-30": {
+     "deals": 146,
+     "won_in_quarter": 23,
+     "ever_won": 30
+    },
+    "await:31-60": {
+     "deals": 350,
+     "won_in_quarter": 40,
+     "ever_won": 49
+    },
+    "await:366+": {
+     "deals": 6644,
+     "won_in_quarter": 1,
+     "ever_won": 5
+    },
+    "await:61-120": {
+     "deals": 660,
+     "won_in_quarter": 30,
+     "ever_won": 40
+    },
+    "open:0-14": {
+     "deals": 20,
+     "won_in_quarter": 4,
+     "ever_won": 5
+    },
+    "open:121-365": {
+     "deals": 50,
+     "won_in_quarter": 3,
+     "ever_won": 15
+    },
+    "open:15-30": {
+     "deals": 22,
+     "won_in_quarter": 1,
+     "ever_won": 8
+    },
+    "open:31-60": {
+     "deals": 31,
+     "won_in_quarter": 2,
+     "ever_won": 9
+    },
+    "open:366+": {
+     "deals": 100,
+     "won_in_quarter": 0,
+     "ever_won": 11
+    },
+    "open:61-120": {
+     "deals": 35,
+     "won_in_quarter": 1,
+     "ever_won": 10
+    }
+   }
+  },
+  {
+   "snapshot": "2025-07-01",
+   "deals": 11126,
+   "won_in_quarter": 209,
+   "await_over_a_year": {
+    "deals": 7297,
+    "won_in_quarter": 2,
+    "ever_won": 4
+   },
+   "groups": {
+    "await:0-14": {
+     "deals": 133,
+     "won_in_quarter": 57,
+     "ever_won": 66
+    },
+    "await:121-365": {
+     "deals": 2453,
+     "won_in_quarter": 25,
+     "ever_won": 31
+    },
+    "await:15-30": {
+     "deals": 141,
+     "won_in_quarter": 35,
+     "ever_won": 39
+    },
+    "await:31-60": {
+     "deals": 223,
+     "won_in_quarter": 35,
+     "ever_won": 42
+    },
+    "await:366+": {
+     "deals": 7297,
+     "won_in_quarter": 2,
+     "ever_won": 4
+    },
+    "await:61-120": {
+     "deals": 580,
+     "won_in_quarter": 27,
+     "ever_won": 43
+    },
+    "open:0-14": {
+     "deals": 33,
+     "won_in_quarter": 6,
+     "ever_won": 13
+    },
+    "open:121-365": {
+     "deals": 71,
+     "won_in_quarter": 1,
+     "ever_won": 16
+    },
+    "open:15-30": {
+     "deals": 28,
+     "won_in_quarter": 8,
+     "ever_won": 14
+    },
+    "open:31-60": {
+     "deals": 30,
+     "won_in_quarter": 8,
+     "ever_won": 13
+    },
+    "open:366+": {
+     "deals": 106,
+     "won_in_quarter": 1,
+     "ever_won": 12
+    },
+    "open:61-120": {
+     "deals": 31,
+     "won_in_quarter": 4,
+     "ever_won": 12
+    }
+   }
+  }
+ ]
+}

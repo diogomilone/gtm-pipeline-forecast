@@ -1,0 +1,2069 @@
+{
+ "cutoff": "2026-11-10",
+ "sources": {
+  "files": {
+   "tenders": {
+    "url": "https://canadabuys.canada.ca/opendata/pub/tenderNoticeComplete-avisAppelOffresComplet.csv",
+    "sha256": "07c948ae245183dc47f065b8548c6f42613cd5afb866917e1756f19b377c88d5",
+    "bytes": 189900721
+   },
+   "awards": {
+    "url": "https://canadabuys.canada.ca/opendata/pub/awardNoticeComplete-avisAttributionComplet.csv",
+    "sha256": "40d5890ff1db291af51d207e6b2701680e9fd7cd8c0e0b6dc4481171f098051b",
+    "bytes": 105652584
+   }
+  },
+  "rows": {
+   "tender_notices": 31272,
+   "award_rows": 29346
+  },
+  "cutoff_latest_tender_publication": "2026-11-10",
+  "opportunities": {
+   "opportunities": 27589,
+   "won": 10059,
+   "cancelled": 1313,
+   "open": 832
+  },
+  "licence": "Open Government Licence - Canada, https://open.canada.ca/en/open-government-licence-canada",
+  "attribution": "Contains information licensed under the Open Government Licence - Canada."
+ },
+ "snapshots": [
+  {
+   "snapshot": "2023-10-01",
+   "actual": {
+    "pipeline_wins": 426,
+    "all_wins": 669,
+    "wins_created_in_quarter": 237,
+    "pipeline_open": 845,
+    "pipeline_await": 5172
+   },
+   "arms": {
+    "fixed": {
+     "forecast": 531.6,
+     "lo80": 514.73,
+     "hi80": 548.47,
+     "deals_counted": 804,
+     "error": 105.6,
+     "pct_error": 24.79,
+     "abs_pct_error": 24.79,
+     "covered80": false
+    },
+    "learned_stage": {
+     "forecast": 138.47,
+     "lo80": 124.75,
+     "hi80": 152.19,
+     "deals_counted": 804,
+     "error": -287.53,
+     "pct_error": -67.5,
+     "abs_pct_error": 67.5,
+     "covered80": false
+    },
+    "time_in_stage": {
+     "forecast": 245.21,
+     "lo80": 226.56,
+     "hi80": 263.85,
+     "deals_counted": 6017,
+     "error": -180.79,
+     "pct_error": -42.44,
+     "abs_pct_error": 42.44,
+     "covered80": false
+    },
+    "run_rate": {
+     "forecast": 205.0,
+     "lo80": null,
+     "hi80": null,
+     "deals_counted": null,
+     "error": -221.0,
+     "pct_error": -51.88,
+     "abs_pct_error": 51.88,
+     "covered80": null
+    }
+   },
+   "leaky": {
+    "learned_stage": {
+     "forecast": 189.2,
+     "error": -236.8,
+     "pct_error": -55.59,
+     "abs_pct_error": 55.59
+    },
+    "time_in_stage": {
+     "forecast": 324.78,
+     "error": -101.22,
+     "pct_error": -23.76,
+     "abs_pct_error": 23.76
+    },
+    "run_rate": {
+     "forecast": 310.0,
+     "error": -116.0,
+     "pct_error": -27.23,
+     "abs_pct_error": 27.23
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "forecast": 370.8,
+     "error": -55.2,
+     "pct_error": -12.96,
+     "abs_pct_error": 12.96
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "forecast": 667.8,
+     "error": 241.8,
+     "pct_error": 56.76,
+     "abs_pct_error": 56.76
+    }
+   ],
+   "weights": {
+    "learned_stage": {
+     "open": 0.17793964620187305,
+     "await": 0.15926892950391644
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.1855036855036855,
+      814
+     ],
+     "await:15-30": [
+      0.15255905511811024,
+      1016
+     ],
+     "await:31-60": [
+      0.06925795053003533,
+      1415
+     ],
+     "await:61-120": [
+      0.021604938271604937,
+      2268
+     ],
+     "await:121-365": [
+      0.0028851702250432777,
+      3466
+     ],
+     "await:366+": [
+      0.0,
+      223
+     ],
+     "open:0-14": [
+      0.14709677419354839,
+      775
+     ],
+     "open:15-30": [
+      0.19179734620024125,
+      829
+     ],
+     "open:31-60": [
+      0.14942528735632185,
+      522
+     ],
+     "open:61-120": [
+      0.03896103896103896,
+      231
+     ],
+     "open:121-365": [
+      0.016216216216216217,
+      185
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.14280094413847363,
+     "await": 0.05031514888067811
+    }
+   },
+   "pipeline": {
+    "open": 845,
+    "await": 5172,
+    "in_window": 804
+   },
+   "weights_leaky": {
+    "learned_stage": {
+     "open": 0.23777315296566076,
+     "await": 0.2297650130548303
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.22972972972972974,
+      814
+     ],
+     "await:15-30": [
+      0.1860236220472441,
+      1016
+     ],
+     "await:31-60": [
+      0.08763250883392226,
+      1415
+     ],
+     "await:61-120": [
+      0.027336860670194002,
+      2268
+     ],
+     "await:121-365": [
+      0.004327755337564916,
+      3466
+     ],
+     "await:366+": [
+      0.0,
+      223
+     ],
+     "open:0-14": [
+      0.20387096774193547,
+      775
+     ],
+     "open:15-30": [
+      0.24969843184559712,
+      829
+     ],
+     "open:31-60": [
+      0.20306513409961685,
+      522
+     ],
+     "open:61-120": [
+      0.08225108225108226,
+      231
+     ],
+     "open:121-365": [
+      0.05405405405405406,
+      185
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.1966955153422502,
+     "await": 0.06270376005216258
+    }
+   }
+  },
+  {
+   "snapshot": "2024-01-01",
+   "actual": {
+    "pipeline_wins": 435,
+    "all_wins": 676,
+    "wins_created_in_quarter": 238,
+    "pipeline_open": 861,
+    "pipeline_await": 6358
+   },
+   "arms": {
+    "fixed": {
+     "forecast": 529.2,
+     "lo80": 512.52,
+     "hi80": 545.88,
+     "deals_counted": 794,
+     "error": 94.2,
+     "pct_error": 21.66,
+     "abs_pct_error": 21.66,
+     "covered80": false
+    },
+    "learned_stage": {
+     "forecast": 145.94,
+     "lo80": 131.95,
+     "hi80": 159.92,
+     "deals_counted": 794,
+     "error": -289.06,
+     "pct_error": -66.45,
+     "abs_pct_error": 66.45,
+     "covered80": false
+    },
+    "time_in_stage": {
+     "forecast": 275.23,
+     "lo80": 255.49,
+     "hi80": 294.98,
+     "deals_counted": 7219,
+     "error": -159.77,
+     "pct_error": -36.73,
+     "abs_pct_error": 36.73,
+     "covered80": false
+    },
+    "run_rate": {
+     "forecast": 281.0,
+     "lo80": null,
+     "hi80": null,
+     "deals_counted": null,
+     "error": -154.0,
+     "pct_error": -35.4,
+     "abs_pct_error": 35.4,
+     "covered80": null
+    }
+   },
+   "leaky": {
+    "learned_stage": {
+     "forecast": 197.37,
+     "error": -237.63,
+     "pct_error": -54.63,
+     "abs_pct_error": 54.63
+    },
+    "time_in_stage": {
+     "forecast": 361.74,
+     "error": -73.26,
+     "pct_error": -16.84,
+     "abs_pct_error": 16.84
+    },
+    "run_rate": {
+     "forecast": 426.0,
+     "error": -9.0,
+     "pct_error": -2.07,
+     "abs_pct_error": 2.07
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "forecast": 370.4,
+     "error": -64.6,
+     "pct_error": -14.85,
+     "abs_pct_error": 14.85
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "forecast": 661.6,
+     "error": 226.6,
+     "pct_error": 52.09,
+     "abs_pct_error": 52.09
+    }
+   ],
+   "weights": {
+    "learned_stage": {
+     "open": 0.18672610203070827,
+     "await": 0.17792421746293247
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.1864801864801865,
+      858
+     ],
+     "await:15-30": [
+      0.16131907308377896,
+      1122
+     ],
+     "await:31-60": [
+      0.07488738738738739,
+      1776
+     ],
+     "await:61-120": [
+      0.024974687816402295,
+      2963
+     ],
+     "await:121-365": [
+      0.0034933171324422843,
+      6584
+     ],
+     "await:366+": [
+      0.0,
+      664
+     ],
+     "open:0-14": [
+      0.17156286721504113,
+      851
+     ],
+     "open:15-30": [
+      0.17769607843137256,
+      816
+     ],
+     "open:31-60": [
+      0.16291161178509533,
+      577
+     ],
+     "open:61-120": [
+      0.04950495049504951,
+      303
+     ],
+     "open:121-365": [
+      0.009615384615384616,
+      312
+     ],
+     "open:366+": [
+      0.0,
+      7
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.14061409630146546,
+     "await": 0.040882079186654256
+    }
+   },
+   "pipeline": {
+    "open": 861,
+    "await": 6358,
+    "in_window": 794
+   },
+   "weights_leaky": {
+    "learned_stage": {
+     "open": 0.2501238236750867,
+     "await": 0.24546952224052718
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.2494172494172494,
+      858
+     ],
+     "await:15-30": [
+      0.19696969696969696,
+      1122
+     ],
+     "await:31-60": [
+      0.09740990990990991,
+      1776
+     ],
+     "await:61-120": [
+      0.029699628754640568,
+      2963
+     ],
+     "await:121-365": [
+      0.004100850546780073,
+      6584
+     ],
+     "await:366+": [
+      0.0,
+      664
+     ],
+     "open:0-14": [
+      0.23384253819036427,
+      851
+     ],
+     "open:15-30": [
+      0.23897058823529413,
+      816
+     ],
+     "open:31-60": [
+      0.21317157712305027,
+      577
+     ],
+     "open:61-120": [
+      0.0858085808580858,
+      303
+     ],
+     "open:121-365": [
+      0.04487179487179487,
+      312
+     ],
+     "open:366+": [
+      0.0,
+      7
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.19434752267969296,
+     "await": 0.0517648743466743
+    }
+   }
+  },
+  {
+   "snapshot": "2024-04-01",
+   "actual": {
+    "pipeline_wins": 344,
+    "all_wins": 499,
+    "wins_created_in_quarter": 151,
+    "pipeline_open": 620,
+    "pipeline_await": 7354
+   },
+   "arms": {
+    "fixed": {
+     "forecast": 493.8,
+     "lo80": 478.61,
+     "hi80": 508.99,
+     "deals_counted": 704,
+     "error": 149.8,
+     "pct_error": 43.55,
+     "abs_pct_error": 43.55,
+     "covered80": false
+    },
+    "learned_stage": {
+     "forecast": 140.02,
+     "lo80": 126.46,
+     "hi80": 153.58,
+     "deals_counted": 704,
+     "error": -203.98,
+     "pct_error": -59.3,
+     "abs_pct_error": 59.3,
+     "covered80": false
+    },
+    "time_in_stage": {
+     "forecast": 234.55,
+     "lo80": 216.43,
+     "hi80": 252.68,
+     "deals_counted": 7974,
+     "error": -109.45,
+     "pct_error": -31.82,
+     "abs_pct_error": 31.82,
+     "covered80": false
+    },
+    "run_rate": {
+     "forecast": 295.0,
+     "lo80": null,
+     "hi80": null,
+     "deals_counted": null,
+     "error": -49.0,
+     "pct_error": -14.24,
+     "abs_pct_error": 14.24,
+     "covered80": null
+    }
+   },
+   "leaky": {
+    "learned_stage": {
+     "forecast": 178.78,
+     "error": -165.22,
+     "pct_error": -48.03,
+     "abs_pct_error": 48.03
+    },
+    "time_in_stage": {
+     "forecast": 296.54,
+     "error": -47.46,
+     "pct_error": -13.8,
+     "abs_pct_error": 13.8
+    },
+    "run_rate": {
+     "forecast": 435.0,
+     "error": 91.0,
+     "pct_error": 26.45,
+     "abs_pct_error": 26.45
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "forecast": 353.0,
+     "error": 9.0,
+     "pct_error": 2.62,
+     "abs_pct_error": 2.62
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "forecast": 598.9,
+     "error": 254.9,
+     "pct_error": 74.1,
+     "abs_pct_error": 74.1
+    }
+   ],
+   "weights": {
+    "learned_stage": {
+     "open": 0.21392785571142284,
+     "await": 0.18427518427518427
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.21734104046242775,
+      865
+     ],
+     "await:15-30": [
+      0.17712177121771217,
+      1084
+     ],
+     "await:31-60": [
+      0.07269789983844911,
+      1857
+     ],
+     "await:61-120": [
+      0.02901292967518133,
+      3171
+     ],
+     "await:121-365": [
+      0.003484688489968321,
+      9470
+     ],
+     "await:366+": [
+      0.0004528985507246377,
+      2208
+     ],
+     "open:0-14": [
+      0.21658986175115208,
+      868
+     ],
+     "open:15-30": [
+      0.20238095238095238,
+      840
+     ],
+     "open:31-60": [
+      0.16034482758620688,
+      580
+     ],
+     "open:61-120": [
+      0.059027777777777776,
+      288
+     ],
+     "open:121-365": [
+      0.014925373134328358,
+      402
+     ],
+     "open:366+": [
+      0.0,
+      56
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.15622940013183917,
+     "await": 0.03436076119002948
+    }
+   },
+   "pipeline": {
+    "open": 620,
+    "await": 7354,
+    "in_window": 704
+   },
+   "weights_leaky": {
+    "learned_stage": {
+     "open": 0.2725450901803607,
+     "await": 0.23587223587223588
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.2682080924855491,
+      865
+     ],
+     "await:15-30": [
+      0.21033210332103322,
+      1084
+     ],
+     "await:31-60": [
+      0.09639203015616586,
+      1857
+     ],
+     "await:61-120": [
+      0.03185115105644907,
+      3171
+     ],
+     "await:121-365": [
+      0.0045406546990496306,
+      9470
+     ],
+     "await:366+": [
+      0.0004528985507246377,
+      2208
+     ],
+     "open:0-14": [
+      0.2684331797235023,
+      868
+     ],
+     "open:15-30": [
+      0.2702380952380952,
+      840
+     ],
+     "open:31-60": [
+      0.2120689655172414,
+      580
+     ],
+     "open:61-120": [
+      0.09375,
+      288
+     ],
+     "open:121-365": [
+      0.04477611940298507,
+      402
+     ],
+     "open:366+": [
+      0.0,
+      56
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.2069874752801582,
+     "await": 0.04202626641651032
+    }
+   }
+  },
+  {
+   "snapshot": "2024-07-01",
+   "actual": {
+    "pipeline_wins": 350,
+    "all_wins": 553,
+    "wins_created_in_quarter": 199,
+    "pipeline_open": 734,
+    "pipeline_await": 7979
+   },
+   "arms": {
+    "fixed": {
+     "forecast": 429.8,
+     "lo80": 414.76,
+     "hi80": 444.84,
+     "deals_counted": 645,
+     "error": 79.8,
+     "pct_error": 22.8,
+     "abs_pct_error": 22.8,
+     "covered80": false
+    },
+    "learned_stage": {
+     "forecast": 143.13,
+     "lo80": 129.65,
+     "hi80": 156.61,
+     "deals_counted": 645,
+     "error": -206.87,
+     "pct_error": -59.11,
+     "abs_pct_error": 59.11,
+     "covered80": false
+    },
+    "time_in_stage": {
+     "forecast": 268.47,
+     "lo80": 249.53,
+     "hi80": 287.41,
+     "deals_counted": 8713,
+     "error": -81.53,
+     "pct_error": -23.29,
+     "abs_pct_error": 23.29,
+     "covered80": false
+    },
+    "run_rate": {
+     "forecast": 224.0,
+     "lo80": null,
+     "hi80": null,
+     "deals_counted": null,
+     "error": -126.0,
+     "pct_error": -36.0,
+     "abs_pct_error": 36.0,
+     "covered80": null
+    }
+   },
+   "leaky": {
+    "learned_stage": {
+     "forecast": 175.29,
+     "error": -174.71,
+     "pct_error": -49.92,
+     "abs_pct_error": 49.92
+    },
+    "time_in_stage": {
+     "forecast": 327.47,
+     "error": -22.53,
+     "pct_error": -6.44,
+     "abs_pct_error": 6.44
+    },
+    "run_rate": {
+     "forecast": 344.0,
+     "error": -6.0,
+     "pct_error": -1.71,
+     "abs_pct_error": 1.71
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "forecast": 300.8,
+     "error": -49.2,
+     "pct_error": -14.06,
+     "abs_pct_error": 14.06
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "forecast": 537.4,
+     "error": 187.4,
+     "pct_error": 53.54,
+     "abs_pct_error": 53.54
+    }
+   ],
+   "weights": {
+    "learned_stage": {
+     "open": 0.24493062966915688,
+     "await": 0.17553688141923435
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.2511961722488038,
+      836
+     ],
+     "await:15-30": [
+      0.19488188976377951,
+      1016
+     ],
+     "await:31-60": [
+      0.08459051724137931,
+      1856
+     ],
+     "await:61-120": [
+      0.03302925448254168,
+      3179
+     ],
+     "await:121-365": [
+      0.004364089775561097,
+      11228
+     ],
+     "await:366+": [
+      0.00020508613617719443,
+      4876
+     ],
+     "open:0-14": [
+      0.25943970767356883,
+      821
+     ],
+     "open:15-30": [
+      0.23544973544973544,
+      756
+     ],
+     "open:31-60": [
+      0.17636986301369864,
+      584
+     ],
+     "open:61-120": [
+      0.06367041198501873,
+      267
+     ],
+     "open:121-365": [
+      0.02242152466367713,
+      446
+     ],
+     "open:366+": [
+      0.0,
+      121
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.17395659432387311,
+     "await": 0.03131660214866687
+    }
+   },
+   "pipeline": {
+    "open": 734,
+    "await": 7979,
+    "in_window": 645
+   },
+   "weights_leaky": {
+    "learned_stage": {
+     "open": 0.29775880469583776,
+     "await": 0.21942110177404295
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.3026315789473684,
+      836
+     ],
+     "await:15-30": [
+      0.22440944881889763,
+      1016
+     ],
+     "await:31-60": [
+      0.109375,
+      1856
+     ],
+     "await:61-120": [
+      0.0374331550802139,
+      3179
+     ],
+     "await:121-365": [
+      0.00552190951193445,
+      11228
+     ],
+     "await:366+": [
+      0.00020508613617719443,
+      4876
+     ],
+     "open:0-14": [
+      0.3020706455542022,
+      821
+     ],
+     "open:15-30": [
+      0.28174603174603174,
+      756
+     ],
+     "open:31-60": [
+      0.23972602739726026,
+      584
+     ],
+     "open:61-120": [
+      0.10486891385767791,
+      267
+     ],
+     "open:121-365": [
+      0.04484304932735426,
+      446
+     ],
+     "open:366+": [
+      0.0,
+      121
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.21669449081803005,
+     "await": 0.03766691313992432
+    }
+   }
+  },
+  {
+   "snapshot": "2024-10-01",
+   "actual": {
+    "pipeline_wins": 411,
+    "all_wins": 672,
+    "wins_created_in_quarter": 254,
+    "pipeline_open": 708,
+    "pipeline_await": 8848
+   },
+   "arms": {
+    "fixed": {
+     "forecast": 437.0,
+     "lo80": 421.88,
+     "hi80": 452.12,
+     "deals_counted": 654,
+     "error": 26.0,
+     "pct_error": 6.33,
+     "abs_pct_error": 6.33,
+     "covered80": false
+    },
+    "learned_stage": {
+     "forecast": 147.33,
+     "lo80": 133.67,
+     "hi80": 160.98,
+     "deals_counted": 654,
+     "error": -263.67,
+     "pct_error": -64.15,
+     "abs_pct_error": 64.15,
+     "covered80": false
+    },
+    "time_in_stage": {
+     "forecast": 278.92,
+     "lo80": 259.53,
+     "hi80": 298.31,
+     "deals_counted": 9556,
+     "error": -132.08,
+     "pct_error": -32.14,
+     "abs_pct_error": 32.14,
+     "covered80": false
+    },
+    "run_rate": {
+     "forecast": 229.0,
+     "lo80": null,
+     "hi80": null,
+     "deals_counted": null,
+     "error": -182.0,
+     "pct_error": -44.28,
+     "abs_pct_error": 44.28,
+     "covered80": null
+    }
+   },
+   "leaky": {
+    "learned_stage": {
+     "forecast": 181.17,
+     "error": -229.83,
+     "pct_error": -55.92,
+     "abs_pct_error": 55.92
+    },
+    "time_in_stage": {
+     "forecast": 344.24,
+     "error": -66.76,
+     "pct_error": -16.24,
+     "abs_pct_error": 16.24
+    },
+    "run_rate": {
+     "forecast": 350.0,
+     "error": -61.0,
+     "pct_error": -14.84,
+     "abs_pct_error": 14.84
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "forecast": 306.2,
+     "error": -104.8,
+     "pct_error": -25.5,
+     "abs_pct_error": 25.5
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "forecast": 545.5,
+     "error": 134.5,
+     "pct_error": 32.73,
+     "abs_pct_error": 32.73
+    }
+   ],
+   "weights": {
+    "learned_stage": {
+     "open": 0.2470525187566988,
+     "await": 0.18316373728029603
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.25029797377830754,
+      839
+     ],
+     "await:15-30": [
+      0.18689581095596133,
+      931
+     ],
+     "await:31-60": [
+      0.10098792535675083,
+      1822
+     ],
+     "await:61-120": [
+      0.03707414829659319,
+      2994
+     ],
+     "await:121-365": [
+      0.004971770455886071,
+      11867
+     ],
+     "await:366+": [
+      0.00023781212841854935,
+      8410
+     ],
+     "open:0-14": [
+      0.2583732057416268,
+      836
+     ],
+     "open:15-30": [
+      0.24166666666666667,
+      720
+     ],
+     "open:31-60": [
+      0.17706576728499157,
+      593
+     ],
+     "open:61-120": [
+      0.06415094339622641,
+      265
+     ],
+     "open:121-365": [
+      0.01580135440180587,
+      443
+     ],
+     "open:366+": [
+      0.0,
+      203
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.1696078431372549,
+     "await": 0.027547183858839294
+    }
+   },
+   "pipeline": {
+    "open": 708,
+    "await": 8848,
+    "in_window": 654
+   },
+   "weights_leaky": {
+    "learned_stage": {
+     "open": 0.3011789924973205,
+     "await": 0.2303422756706753
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.30274135876042907,
+      839
+     ],
+     "await:15-30": [
+      0.22986036519871106,
+      931
+     ],
+     "await:31-60": [
+      0.12623490669593854,
+      1822
+     ],
+     "await:61-120": [
+      0.04542418169672679,
+      2994
+     ],
+     "await:121-365": [
+      0.006235779893823208,
+      11867
+     ],
+     "await:366+": [
+      0.00023781212841854935,
+      8410
+     ],
+     "open:0-14": [
+      0.31100478468899523,
+      836
+     ],
+     "open:15-30": [
+      0.2833333333333333,
+      720
+     ],
+     "open:31-60": [
+      0.23440134907251264,
+      593
+     ],
+     "open:61-120": [
+      0.10943396226415095,
+      265
+     ],
+     "open:121-365": [
+      0.029345372460496615,
+      443
+     ],
+     "open:366+": [
+      0.0,
+      203
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.2107843137254902,
+     "await": 0.03387559096154562
+    }
+   }
+  },
+  {
+   "snapshot": "2025-01-01",
+   "actual": {
+    "pipeline_wins": 418,
+    "all_wins": 666,
+    "wins_created_in_quarter": 242,
+    "pipeline_open": 754,
+    "pipeline_await": 9726
+   },
+   "arms": {
+    "fixed": {
+     "forecast": 457.4,
+     "lo80": 441.97,
+     "hi80": 472.83,
+     "deals_counted": 683,
+     "error": 39.4,
+     "pct_error": 9.43,
+     "abs_pct_error": 9.43,
+     "covered80": false
+    },
+    "learned_stage": {
+     "forecast": 153.71,
+     "lo80": 139.75,
+     "hi80": 167.68,
+     "deals_counted": 683,
+     "error": -264.29,
+     "pct_error": -63.23,
+     "abs_pct_error": 63.23,
+     "covered80": false
+    },
+    "time_in_stage": {
+     "forecast": 320.37,
+     "lo80": 299.61,
+     "hi80": 341.13,
+     "deals_counted": 10480,
+     "error": -97.63,
+     "pct_error": -23.36,
+     "abs_pct_error": 23.36,
+     "covered80": false
+    },
+    "run_rate": {
+     "forecast": 292.0,
+     "lo80": null,
+     "hi80": null,
+     "deals_counted": null,
+     "error": -126.0,
+     "pct_error": -30.14,
+     "abs_pct_error": 30.14,
+     "covered80": null
+    }
+   },
+   "leaky": {
+    "learned_stage": {
+     "forecast": 189.71,
+     "error": -228.29,
+     "pct_error": -54.61,
+     "abs_pct_error": 54.61
+    },
+    "time_in_stage": {
+     "forecast": 392.6,
+     "error": -25.4,
+     "pct_error": -6.08,
+     "abs_pct_error": 6.08
+    },
+    "run_rate": {
+     "forecast": 411.0,
+     "error": -7.0,
+     "pct_error": -1.67,
+     "abs_pct_error": 1.67
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "forecast": 320.8,
+     "error": -97.2,
+     "pct_error": -23.25,
+     "abs_pct_error": 23.25
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "forecast": 570.2,
+     "error": 152.2,
+     "pct_error": 36.41,
+     "abs_pct_error": 36.41
+    }
+   ],
+   "weights": {
+    "learned_stage": {
+     "open": 0.24381828637147787,
+     "await": 0.1899810964083176
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.25157232704402516,
+      795
+     ],
+     "await:15-30": [
+      0.19160997732426305,
+      882
+     ],
+     "await:31-60": [
+      0.11049723756906077,
+      1810
+     ],
+     "await:61-120": [
+      0.044654939106901215,
+      2956
+     ],
+     "await:121-365": [
+      0.005541605333795134,
+      11549
+     ],
+     "await:366+": [
+      0.0003985016338566988,
+      12547
+     ],
+     "open:0-14": [
+      0.25551232166018156,
+      771
+     ],
+     "open:15-30": [
+      0.25263157894736843,
+      665
+     ],
+     "open:31-60": [
+      0.1839080459770115,
+      522
+     ],
+     "open:61-120": [
+      0.05384615384615385,
+      260
+     ],
+     "open:121-365": [
+      0.014705882352941176,
+      408
+     ],
+     "open:366+": [
+      0.0,
+      297
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.16455696202531644,
+     "await": 0.02521366122007924
+    }
+   },
+   "pipeline": {
+    "open": 754,
+    "await": 9726,
+    "in_window": 683
+   },
+   "weights_leaky": {
+    "learned_stage": {
+     "open": 0.3024726854514089,
+     "await": 0.23156899810964082
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.3018867924528302,
+      795
+     ],
+     "await:15-30": [
+      0.23582766439909297,
+      882
+     ],
+     "await:31-60": [
+      0.13370165745856355,
+      1810
+     ],
+     "await:61-120": [
+      0.05277401894451962,
+      2956
+     ],
+     "await:121-365": [
+      0.006840419083903368,
+      11549
+     ],
+     "await:366+": [
+      0.0003985016338566988,
+      12547
+     ],
+     "open:0-14": [
+      0.3125810635538262,
+      771
+     ],
+     "open:15-30": [
+      0.29774436090225564,
+      665
+     ],
+     "open:31-60": [
+      0.23371647509578544,
+      522
+     ],
+     "open:61-120": [
+      0.11538461538461539,
+      260
+     ],
+     "open:121-365": [
+      0.04656862745098039,
+      408
+     ],
+     "open:366+": [
+      0.0,
+      297
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.20868970236058842,
+     "await": 0.03045286355152428
+    }
+   }
+  },
+  {
+   "snapshot": "2025-04-01",
+   "actual": {
+    "pipeline_wins": 327,
+    "all_wins": 471,
+    "wins_created_in_quarter": 137,
+    "pipeline_open": 608,
+    "pipeline_await": 10504
+   },
+   "arms": {
+    "fixed": {
+     "forecast": 490.0,
+     "lo80": 474.84,
+     "hi80": 505.16,
+     "deals_counted": 700,
+     "error": 163.0,
+     "pct_error": 49.85,
+     "abs_pct_error": 49.85,
+     "covered80": false
+    },
+    "learned_stage": {
+     "forecast": 164.5,
+     "lo80": 150.15,
+     "hi80": 178.86,
+     "deals_counted": 700,
+     "error": -162.5,
+     "pct_error": -49.69,
+     "abs_pct_error": 49.69,
+     "covered80": false
+    },
+    "time_in_stage": {
+     "forecast": 302.54,
+     "lo80": 282.35,
+     "hi80": 322.74,
+     "deals_counted": 11112,
+     "error": -24.46,
+     "pct_error": -7.48,
+     "abs_pct_error": 7.48,
+     "covered80": false
+    },
+    "run_rate": {
+     "forecast": 295.0,
+     "lo80": null,
+     "hi80": null,
+     "deals_counted": null,
+     "error": -32.0,
+     "pct_error": -9.79,
+     "abs_pct_error": 9.79,
+     "covered80": null
+    }
+   },
+   "leaky": {
+    "learned_stage": {
+     "forecast": 192.41,
+     "error": -134.59,
+     "pct_error": -41.16,
+     "abs_pct_error": 41.16
+    },
+    "time_in_stage": {
+     "forecast": 361.48,
+     "error": 34.48,
+     "pct_error": 10.54,
+     "abs_pct_error": 10.54
+    },
+    "run_rate": {
+     "forecast": 418.0,
+     "error": 91.0,
+     "pct_error": 27.83,
+     "abs_pct_error": 27.83
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "forecast": 350.0,
+     "error": 23.0,
+     "pct_error": 7.03,
+     "abs_pct_error": 7.03
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "forecast": 595.0,
+     "error": 268.0,
+     "pct_error": 81.96,
+     "abs_pct_error": 81.96
+    }
+   ],
+   "weights": {
+    "learned_stage": {
+     "open": 0.2587666263603386,
+     "await": 0.21124031007751937
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.2634338138925295,
+      763
+     ],
+     "await:15-30": [
+      0.19456521739130433,
+      920
+     ],
+     "await:31-60": [
+      0.12083333333333333,
+      1680
+     ],
+     "await:61-120": [
+      0.04913916786226686,
+      2788
+     ],
+     "await:121-365": [
+      0.006141618497109827,
+      11072
+     ],
+     "await:366+": [
+      0.0002996883241428914,
+      16684
+     ],
+     "open:0-14": [
+      0.25757575757575757,
+      726
+     ],
+     "open:15-30": [
+      0.2575039494470774,
+      633
+     ],
+     "open:31-60": [
+      0.20930232558139536,
+      473
+     ],
+     "open:61-120": [
+      0.07279693486590039,
+      261
+     ],
+     "open:121-365": [
+      0.024390243902439025,
+      369
+     ],
+     "open:366+": [
+      0.0,
+      354
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.16938920454545456,
+     "await": 0.02338750110596632
+    }
+   },
+   "pipeline": {
+    "open": 608,
+    "await": 10504,
+    "in_window": 700
+   },
+   "weights_leaky": {
+    "learned_stage": {
+     "open": 0.31136638452237003,
+     "await": 0.23837209302325582
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.30799475753604194,
+      763
+     ],
+     "await:15-30": [
+      0.23152173913043478,
+      920
+     ],
+     "await:31-60": [
+      0.14107142857142857,
+      1680
+     ],
+     "await:61-120": [
+      0.05774748923959828,
+      2788
+     ],
+     "await:121-365": [
+      0.0072254335260115606,
+      11072
+     ],
+     "await:366+": [
+      0.0002996883241428914,
+      16684
+     ],
+     "open:0-14": [
+      0.3154269972451791,
+      726
+     ],
+     "open:15-30": [
+      0.2985781990521327,
+      633
+     ],
+     "open:31-60": [
+      0.25792811839323465,
+      473
+     ],
+     "open:61-120": [
+      0.12260536398467432,
+      261
+     ],
+     "open:121-365": [
+      0.051490514905149054,
+      369
+     ],
+     "open:366+": [
+      0.002824858757062147,
+      354
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.21022727272727273,
+     "await": 0.027457457162237887
+    }
+   }
+  },
+  {
+   "snapshot": "2025-07-01",
+   "actual": {
+    "pipeline_wins": 426,
+    "all_wins": 638,
+    "wins_created_in_quarter": 205,
+    "pipeline_open": 798,
+    "pipeline_await": 11003
+   },
+   "arms": {
+    "fixed": {
+     "forecast": 440.2,
+     "lo80": 424.61,
+     "hi80": 455.79,
+     "deals_counted": 675,
+     "error": 14.2,
+     "pct_error": 3.33,
+     "abs_pct_error": 3.33,
+     "covered80": true
+    },
+    "learned_stage": {
+     "forecast": 169.16,
+     "lo80": 154.74,
+     "hi80": 183.58,
+     "deals_counted": 675,
+     "error": -256.84,
+     "pct_error": -60.29,
+     "abs_pct_error": 60.29,
+     "covered80": false
+    },
+    "time_in_stage": {
+     "forecast": 319.66,
+     "lo80": 299.18,
+     "hi80": 340.15,
+     "deals_counted": 11801,
+     "error": -106.34,
+     "pct_error": -24.96,
+     "abs_pct_error": 24.96,
+     "covered80": false
+    },
+    "run_rate": {
+     "forecast": 246.0,
+     "lo80": null,
+     "hi80": null,
+     "deals_counted": null,
+     "error": -180.0,
+     "pct_error": -42.25,
+     "abs_pct_error": 42.25,
+     "covered80": null
+    }
+   },
+   "leaky": {
+    "learned_stage": {
+     "forecast": 195.05,
+     "error": -230.95,
+     "pct_error": -54.21,
+     "abs_pct_error": 54.21
+    },
+    "time_in_stage": {
+     "forecast": 370.97,
+     "error": -55.03,
+     "pct_error": -12.92,
+     "abs_pct_error": 12.92
+    },
+    "run_rate": {
+     "forecast": 327.0,
+     "error": -99.0,
+     "pct_error": -23.24,
+     "abs_pct_error": 23.24
+    }
+   },
+   "fixed_range": [
+    {
+     "weights": {
+      "open_for_bids": 0.4,
+      "awaiting_award": 0.6
+     },
+     "forecast": 305.2,
+     "error": -120.8,
+     "pct_error": -28.36,
+     "abs_pct_error": 28.36
+    },
+    {
+     "weights": {
+      "open_for_bids": 0.8,
+      "awaiting_award": 0.9
+     },
+     "forecast": 557.6,
+     "error": 131.6,
+     "pct_error": 30.89,
+     "abs_pct_error": 30.89
+    }
+   ],
+   "weights": {
+    "learned_stage": {
+     "open": 0.2619191309595655,
+     "await": 0.21853658536585366
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.27023498694516973,
+      766
+     ],
+     "await:15-30": [
+      0.20819848975188782,
+      927
+     ],
+     "await:31-60": [
+      0.12777777777777777,
+      1620
+     ],
+     "await:61-120": [
+      0.05343796711509716,
+      2676
+     ],
+     "await:121-365": [
+      0.0058156163599961865,
+      10489
+     ],
+     "await:366+": [
+      0.0002915593566256864,
+      20579
+     ],
+     "open:0-14": [
+      0.2580195258019526,
+      717
+     ],
+     "open:15-30": [
+      0.27022900763358776,
+      655
+     ],
+     "open:31-60": [
+      0.19222462203023757,
+      463
+     ],
+     "open:61-120": [
+      0.08943089430894309,
+      246
+     ],
+     "open:121-365": [
+      0.030211480362537766,
+      331
+     ],
+     "open:366+": [
+      0.0,
+      392
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.17225392296718972,
+     "await": 0.022047116604150364
+    }
+   },
+   "pipeline": {
+    "open": 798,
+    "await": 11003,
+    "in_window": 675
+   },
+   "weights_leaky": {
+    "learned_stage": {
+     "open": 0.30416415208207603,
+     "await": 0.24585365853658536
+    },
+    "time_in_stage": {
+     "await:0-14": [
+      0.3093994778067885,
+      766
+     ],
+     "await:15-30": [
+      0.2319309600862999,
+      927
+     ],
+     "await:31-60": [
+      0.14320987654320988,
+      1620
+     ],
+     "await:61-120": [
+      0.06203288490284006,
+      2676
+     ],
+     "await:121-365": [
+      0.007150347983601869,
+      10489
+     ],
+     "await:366+": [
+      0.0002915593566256864,
+      20579
+     ],
+     "open:0-14": [
+      0.3068340306834031,
+      717
+     ],
+     "open:15-30": [
+      0.29923664122137406,
+      655
+     ],
+     "open:31-60": [
+      0.23542116630669546,
+      463
+     ],
+     "open:61-120": [
+      0.12195121951219512,
+      246
+     ],
+     "open:121-365": [
+      0.05740181268882175,
+      331
+     ],
+     "open:366+": [
+      0.002551020408163265,
+      392
+     ]
+    },
+    "stage_pooled": {
+     "open": 0.20506419400855921,
+     "await": 0.025123458455892273
+    }
+   }
+  }
+ ],
+ "main_snapshot": "2025-07-01",
+ "backtest": {
+  "all8": {
+   "fixed": {
+    "mape": 22.72,
+    "bias_pct": 22.72,
+    "worst_abs_pct": 49.85,
+    "best_in_quarters": 6,
+    "covered80": 1
+   },
+   "learned_stage": {
+    "mape": 61.22,
+    "bias_pct": -61.22,
+    "worst_abs_pct": 67.5,
+    "best_in_quarters": 0,
+    "covered80": 0
+   },
+   "time_in_stage": {
+    "mape": 27.78,
+    "bias_pct": -27.78,
+    "worst_abs_pct": 42.44,
+    "best_in_quarters": 1,
+    "covered80": 0
+   },
+   "run_rate": {
+    "mape": 33.0,
+    "bias_pct": -33.0,
+    "worst_abs_pct": 51.88,
+    "best_in_quarters": 1
+   }
+  },
+  "earlier7": {
+   "fixed": {
+    "mape": 25.49,
+    "bias_pct": 25.49,
+    "worst_abs_pct": 49.85,
+    "best_in_quarters": 5,
+    "covered80": 0
+   },
+   "learned_stage": {
+    "mape": 61.35,
+    "bias_pct": -61.35,
+    "worst_abs_pct": 67.5,
+    "best_in_quarters": 0,
+    "covered80": 0
+   },
+   "time_in_stage": {
+    "mape": 28.18,
+    "bias_pct": -28.18,
+    "worst_abs_pct": 42.44,
+    "best_in_quarters": 1,
+    "covered80": 0
+   },
+   "run_rate": {
+    "mape": 31.68,
+    "bias_pct": -31.68,
+    "worst_abs_pct": 51.88,
+    "best_in_quarters": 1
+   }
+  },
+  "leaky_all8": {
+   "learned_stage": {
+    "mape": 51.76,
+    "bias_pct": -51.76,
+    "worst_abs_pct": 55.92,
+    "best_in_quarters": null
+   },
+   "time_in_stage": {
+    "mape": 13.33,
+    "bias_pct": -10.69,
+    "worst_abs_pct": 23.76,
+    "best_in_quarters": null
+   },
+   "run_rate": {
+    "mape": 15.63,
+    "bias_pct": -2.06,
+    "worst_abs_pct": 27.83,
+    "best_in_quarters": null
+   }
+  }
+ },
+ "share_new_by_quarter_pct": [
+  35.4,
+  35.2,
+  30.3,
+  36.0,
+  37.8,
+  36.3,
+  29.1,
+  32.1
+ ],
+ "go_live": {
+  "wins": 6732,
+  "with_start": 5869,
+  "median_days": 0,
+  "q1": 0.0,
+  "q3": 0.0,
+  "p90": 13.0,
+  "share_before_award_pct": 15.3,
+  "share_same_day_pct": 62.4,
+  "share_30plus_pct": 5.1,
+  "with_expected": 3723,
+  "slip_median_days": 0,
+  "slip_share_30plus_late_pct": 22.0,
+  "slip_share_30plus_early_pct": 3.3,
+  "slip_share_within_7_pct": 56.2,
+  "publish_lag_median_days": 12.0,
+  "publish_lag_share_90plus_pct": 22.5
+ },
+ "channels": {
+  "Open request for proposal": {
+   "opportunities": 11648,
+   "won": 4417,
+   "win_rate_pct": 37.9,
+   "cancelled_pct": 4.7,
+   "median_days_to_win": 61,
+   "wins_per_quarter": 381.6
+  },
+  "Advance contract award notice": {
+   "opportunities": 1180,
+   "won": 427,
+   "win_rate_pct": 36.2,
+   "cancelled_pct": 1.8,
+   "median_days_to_win": 36,
+   "wins_per_quarter": 36.9
+  },
+  "Other": {
+   "opportunities": 2001,
+   "won": 580,
+   "win_rate_pct": 29.0,
+   "cancelled_pct": 4.1,
+   "median_days_to_win": 75.0,
+   "wins_per_quarter": 50.1
+  },
+  "Standing offer request": {
+   "opportunities": 1525,
+   "won": 576,
+   "win_rate_pct": 37.8,
+   "cancelled_pct": 4.3,
+   "median_days_to_win": 73.5,
+   "wins_per_quarter": 49.8
+  },
+  "Against a supply arrangement": {
+   "opportunities": 1881,
+   "won": 698,
+   "win_rate_pct": 37.1,
+   "cancelled_pct": 4.7,
+   "median_days_to_win": 47.0,
+   "wins_per_quarter": 60.3
+  }
+ },
+ "accounts": {
+  "Public Works and Government Services": {
+   "opportunities": 5697,
+   "won": 2097,
+   "win_rate_pct": 36.8,
+   "cancelled_pct": 6.1,
+   "median_days_to_win": 62,
+   "wins_per_quarter": 181.2
+  },
+  "National Defence": {
+   "opportunities": 1703,
+   "won": 759,
+   "win_rate_pct": 44.6,
+   "cancelled_pct": 3.7,
+   "median_days_to_win": 67,
+   "wins_per_quarter": 65.6
+  },
+  "Shared Services Canada": {
+   "opportunities": 963,
+   "won": 186,
+   "win_rate_pct": 19.3,
+   "cancelled_pct": 0.3,
+   "median_days_to_win": 24.0,
+   "wins_per_quarter": 16.1
+  },
+  "Public Services and Procurement Canada": {
+   "opportunities": 636,
+   "won": 240,
+   "win_rate_pct": 37.7,
+   "cancelled_pct": 1.1,
+   "median_days_to_win": 50.5,
+   "wins_per_quarter": 20.7
+  },
+  "Correctional Service Canada": {
+   "opportunities": 604,
+   "won": 203,
+   "win_rate_pct": 33.6,
+   "cancelled_pct": 4.0,
+   "median_days_to_win": 52,
+   "wins_per_quarter": 17.5
+  },
+  "Fisheries and Oceans Canada": {
+   "opportunities": 572,
+   "won": 279,
+   "win_rate_pct": 48.8,
+   "cancelled_pct": 5.4,
+   "median_days_to_win": 43,
+   "wins_per_quarter": 24.1
+  },
+  "Parks Canada": {
+   "opportunities": 555,
+   "won": 274,
+   "win_rate_pct": 49.4,
+   "cancelled_pct": 4.5,
+   "median_days_to_win": 44.0,
+   "wins_per_quarter": 23.7
+  },
+  "National Research Council Canada": {
+   "opportunities": 514,
+   "won": 319,
+   "win_rate_pct": 62.1,
+   "cancelled_pct": 3.9,
+   "median_days_to_win": 57,
+   "wins_per_quarter": 27.6
+  }
+ },
+ "amounts": {
+  "wins": 6732,
+  "with_amount": 2783,
+  "share_with_amount_pct": 41.3,
+  "median_cad": 194638.0,
+  "q1_cad": 73778.0,
+  "q3_cad": 724472.0
+ },
+ "overall_cohort": {
+  "cohort": 18235,
+  "won": 6698,
+  "win_rate_pct": 36.7
+ },
+ "predictions": {
+  "P1": {
+   "text": "Fixed default weights (60/80) over-forecast the main quarter (snapshot 2025-07-01) by more than 40%.",
+   "held": false,
+   "observed": {
+    "fixed_pct_error_main": 3.33
+   }
+  },
+  "P2": {
+   "text": "Learned stage weights cut the main quarter's absolute error to less than half of the fixed weights' absolute error.",
+   "held": false,
+   "observed": {
+    "learned_abs_error": 256.84,
+    "fixed_abs_error": 14.2
+   }
+  },
+  "P3": {
+   "text": "Over the 8 backtest quarters, time in stage has a lower MAPE than learned stage weights.",
+   "held": true,
+   "observed": {
+    "tis_mape": 27.78,
+    "learned_mape": 61.22
+   }
+  },
+  "P4": {
+   "text": "Over the 8 backtest quarters, the point-in-time learned arms (learned stage and time in stage) are biased low: mean signed percentage error below zero for both.",
+   "held": true,
+   "observed": {
+    "learned_bias": -61.22,
+    "tis_bias": -27.78
+   }
+  },
+  "P5": {
+   "text": "The leakage contrast flatters time in stage: its MAPE with every award known is at least 5 points lower than point in time.",
+   "held": true,
+   "observed": {
+    "tis_mape": 27.78,
+    "tis_leaky_mape": 13.33
+   }
+  },
+  "P6": {
+   "text": "Over the 8 backtest quarters, the median share of a quarter's awards that come from opportunities created after the quarter began is at least 30%.",
+   "held": true,
+   "observed": {
+    "median_share_new_pct": 35.3
+   }
+  },
+  "P7": {
+   "text": "Time in stage beats the run-rate baseline on MAPE over the 8 backtest quarters.",
+   "held": true,
+   "observed": {
+    "tis_mape": 27.78,
+    "run_rate_mape": 33.0
+   }
+  },
+  "P8": {
+   "text": "Time in stage's 80% interval covers the actual count in at most 4 of the 8 backtest quarters (too narrow, because rates drift).",
+   "held": true,
+   "observed": {
+    "tis_covered80": 0
+   }
+  }
+ }
+}

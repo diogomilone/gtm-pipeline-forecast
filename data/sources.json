@@ -1,0 +1,27 @@
+{
+ "files": {
+  "tenders": {
+   "url": "https://canadabuys.canada.ca/opendata/pub/tenderNoticeComplete-avisAppelOffresComplet.csv",
+   "sha256": "07c948ae245183dc47f065b8548c6f42613cd5afb866917e1756f19b377c88d5",
+   "bytes": 189900721
+  },
+  "awards": {
+   "url": "https://canadabuys.canada.ca/opendata/pub/awardNoticeComplete-avisAttributionComplet.csv",
+   "sha256": "40d5890ff1db291af51d207e6b2701680e9fd7cd8c0e0b6dc4481171f098051b",
+   "bytes": 105652584
+  }
+ },
+ "rows": {
+  "tender_notices": 31272,
+  "award_rows": 29346
+ },
+ "cutoff_latest_tender_publication": "2026-11-10",
+ "opportunities": {
+  "opportunities": 27589,
+  "won": 10059,
+  "cancelled": 1313,
+  "open": 832
+ },
+ "licence": "Open Government Licence - Canada, https://open.canada.ca/en/open-government-licence-canada",
+ "attribution": "Contains information licensed under the Open Government Licence - Canada."
+}
